@@ -6,10 +6,11 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "colors": "~1.0.3",
+    "connect": "~3.3.2",
     "express": "~3.5.1",
     "jade": "*",
     "mongoose": "~3.8.18",
-    "connect": "~3.3.2",
-    "colors": "~1.0.3"
+    "node-mongo-seeds": "^2.0.2"
   }
 }
