@@ -11,7 +11,7 @@ angular.module('distApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/project/:name', {
+      .when('/project/:project_id', {
         templateUrl: 'views/project.html',
         controller: 'ProjectCtrl'
       })
