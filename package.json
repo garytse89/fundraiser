@@ -11,6 +11,7 @@
     "express": "~3.5.1",
     "jade": "*",
     "mongoose": "~3.8.18",
-    "node-mongo-seeds": "^2.0.2"
+    "node-mongo-seeds": "^2.0.2",
+    "underscore": "~1.7.0"
   }
 }

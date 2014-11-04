@@ -23,7 +23,7 @@ module.exports = function(database_name) {
 
 	var Project = new Schema({
 		name: { type: String },
-		category: { type: String, required: true },
+		category: { type: Schema.Types.ObjectId, ref: 'Category', required: true },
 		country: { type: String, required: true },
 		cost: { type: Number, required: true },
 		short_description: { type: String, required: true },
@@ -35,12 +35,12 @@ module.exports = function(database_name) {
 		name: { type: String, required: true, unique: true },
 		email: { type: String, required: true },
 		phone_number: { type: String, required: true },
-		projects: [Project]
+		projects: [{ type: Schema.Types.ObjectId, ref: 'Project' }]
 	}, { collection: 'donators' })
 
 	var Donation = new Schema({
 		donator: { type: Schema.Types.ObjectId, ref: 'Donator', required: true },
-		created_at: { type: Date, default: Date.now, required: true },
+		created_at: { type: Date, default: Date.now },
 		amount: { type: Number, required: true }
 	}, { collection: 'donations'})
 
