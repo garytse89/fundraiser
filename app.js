@@ -1,11 +1,10 @@
-var home_directory = __dirname;
-
 var express =  require('express');
 
 app = express()
 
 var http = require('http'),
     path = require('path'),
+	colors = require('colors'),
   	connect = require('connect'),
   	frontEndDir = 'dist/app/'
 
@@ -29,7 +28,7 @@ app.set('port', process.env.PORT || 8080);
 global.Models = require('./config/mongoose')
 
 http.createServer(app).listen(app.get('port'), function() {
-  console.log('Express server listening on port %s', app.get('port'));
+  console.log('Express server for "Fundraiser" listening on port %s'.bold.green, app.get('port'));
 });
 
 module.exports = app
