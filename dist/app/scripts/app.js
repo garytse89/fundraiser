@@ -11,6 +11,10 @@ angular.module('distApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/project/:name', {
+        templateUrl: 'views/project.html',
+        controller: 'ProjectCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -1,0 +1,4 @@
+thover:hover, thover:focus: {
+	border-color: #428bca !important;
+	color: white !important;
+}
