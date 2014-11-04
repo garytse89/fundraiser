@@ -1,26 +1,65 @@
 [
 	{
 		"name" : "Project 1",
-		"short_description" : "Rescue children from Africa",
-		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
-		"limit" : 1,
-		"threshold" : 4000,
-		"category" : "Rescue"
+		"category" : "Rescue",
+		"country" : "Cambodia",
+		"cost" : 595,
+		"short_description" : "Reintegrate a child rescued from sexual exploitation with his or her family ",
+		"description" : "Reintegrate a child rescued from sexual exploitation with his or her family ",
+		"limit" : 1	
 	},
 	{
 		"name" : "Project 2",
-		"short_description" : "Buy a lightbulb",
+		"category" : "Rescue",
+		"country" : "Cambodia",
+		"cost" : 1250,
+		"short_description" : "Track down children in the sex trade by funding an investigation from a tip",
 		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
-		"limit" : 1,
-		"threshold" : 500,
-		"category" : "Investment"
+		"limit" : 1
 	},
 	{
 		"name" : "Project 3",
-		"short_description" : "Drive a schoolbus",
+		"category" : "Rescue",
+		"country" : "Cambodia",
+		"cost" : 3850,
+		"short_description" : "Provide a rescue operation for children from rogue orphanages",
 		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
-		"limit" : 1,
-		"threshold" : 99999,
-		"category" : "Rehabilitation"
+		"limit" : 1
+	},
+	{
+		"name" : "Project 4",
+		"category" : "Rescue",
+		"country" : "Cambodia",
+		"cost" : 3400,
+		"short_description" : "Rescue one child from Phnom Penh's sex trade by donating to day-of extraction costs",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 5",
+		"category" : "Rescue",
+		"country" : "Vietnam",
+		"cost" : 25500,
+		"short_description" : "Rescue one girl trafficked into Vietnam-China sex trade",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 6",
+		"category" : "Rescue",
+		"country" : "Vietnam",
+		"cost" : 27700,
+		"short_description" : "Rescue 10 children from a confined garment factory in Ho Chi Minh City",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 7",
+		"category" : "Rescue",
+		"country" : "Cambodia",
+		"cost" : 48000,
+		"short_description" : "Support a brothel rescue in December 2014 for trafficked underage girls",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
 	}
 ]
