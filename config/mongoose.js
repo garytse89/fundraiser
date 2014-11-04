@@ -39,7 +39,8 @@ module.exports = function(database_name) {
 
 	var Donation = new Schema({
 		donator: { type: Schema.Types.ObjectId, ref: 'Donator', required: true },
-		created_at: { type: Date, default: Date.now, required: true }
+		created_at: { type: Date, default: Date.now, required: true },
+		amount: { type: Number, required: true }
 	})
 
 	return {
