@@ -15,71 +15,11 @@
   </div>
 
   <div class="col-md-9">
-    
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail thover" style="cursor:pointer">
-          <div class="caption">
-            <h3>Example Project</h3>
-            <p>This is a project description...</p>
-            <p><button class="btn btn-primary" role="button">Fund</button> <button class="btn btn-default" role="button">See Details</button></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <div class="caption">
-            <h3>Example Project</h3>
-            <p>This is a project description...</p>
-            <p><button class="btn btn-primary" role="button">Fund</button> <button class="btn btn-default" role="button">See Details</button></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <div class="caption">
-            <h3>Example Project</h3>
-            <p>This is a project description...</p>
-            <p><button class="btn btn-primary" role="button">Fund</button> <button class="btn btn-default" role="button">See Details</button></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <div class="caption">
-            <h3>Example Project</h3>
-            <p>This is a project description...</p>
-            <p><button class="btn btn-primary" role="button">Fund</button> <button class="btn btn-default" role="button">See Details</button></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <div class="caption">
-            <h3>Example Project</h3>
-            <p>This is a project description...</p>
-            <p><button class="btn btn-primary" role="button">Fund</button> <button class="btn btn-default" role="button">See Details</button></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <div class="caption">
-            <h3>Example Project</h3>
-            <p>This is a project description...</p>
-            <p><button class="btn btn-primary" role="button">Fund</button> <button class="btn btn-default" role="button">See Details</button></p>
-          </div>
-        </div>
-      </div>
 
       <div ng-repeat="project in projects" class="col-sm-6 col-md-4">
         <div class="thumbnail">
           <div class="caption">
-            <h3>{{ project.title }}</h3>
+            <h3>{{ project.name }}</h3>
 
             <p>{{ project.short_description }}</p>
             <p><button class="btn btn-primary" role="button">Fund</button> <button class="btn btn-default" role="button">See Details</button></p>
