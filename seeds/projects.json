@@ -1,0 +1,26 @@
+[
+	{
+		"name" : "Project 1",
+		"short_description" : "Rescue children from Africa",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1,
+		"threshold" : 4000,
+		"category" : "Rescue"
+	},
+	{
+		"name" : "Project 2",
+		"short_description" : "Buy a lightbulb",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1,
+		"threshold" : 500,
+		"category" : "Investment"
+	},
+	{
+		"name" : "Project 3",
+		"short_description" : "Drive a schoolbus",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1,
+		"threshold" : 99999,
+		"category" : "Rehabilitation"
+	}
+]
