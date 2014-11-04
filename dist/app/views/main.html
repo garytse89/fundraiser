@@ -19,10 +19,12 @@
       <div ng-repeat="project in projects" class="col-sm-6 col-md-4">
         <div class="thumbnail">
           <div class="caption">
-            <h3>{{ project.name }}</h3>
-
+            <h3><b>{{ project.name }}</b></h3>
+            <p><b>Type: </b>{{ project.category }}</p>
+            <p><b>Country: </b>{{ project.country }}</p>
+            <p><b>Cost: </b>{{ project.cost }}</p>
             <p>{{ project.short_description }}</p>
-            <p><button class="btn btn-primary" role="button">Fund</button> <button class="btn btn-default" role="button">See Details</button></p>
+            <p><button class="btn btn-primary" role="button">Find Out More!</button></p>
           </div>
         </div>
       </div>
