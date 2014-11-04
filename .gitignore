@@ -1,0 +1,12 @@
+node_modules
+.tmp
+.sass-cache
+pid
+dist/app/bower_components
+mongo-run
+output.md
+*.ns
+*.0
+*.lock
+*.log
+*.exe
