@@ -2,6 +2,13 @@ module.exports = function(app) {
 	
 
 	app.get('/projects', function(req, res, next) {
+
+		Models.Project.find( function(err, result) {
+			if(err) {
+				return res.send(404, err)
+			}
+			return res.send(200, result)
+		})
 	})
 
 	app.post('/fundProject', function(req, res, next) {
