@@ -22,13 +22,13 @@ module.exports = function(database_name) {
 	})	
 
 	var Project = new Schema({
-		name: { type: String, required: true, unique: true },
+		name: { type: String },
 		short_description: { type: String, required: true },
 		description: { type: String, required: true },
 		limit: { type: Number, required: true, default: 1 }, // most projects will disappear after being funded (limit=1); others might be repeatable
 		threshold: { type: Number, required: true }, // maximum amount needed to successfully fund it
 		category: { type: Schema.Types.ObjectId, ref: 'Category', required: true }
-	})
+	}).index({ name: 1 }, { unique: true, sparse: true })
 
 	var Donator = new Schema({
 		name: { type: String, required: true, unique: true },
