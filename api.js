@@ -2,13 +2,23 @@ module.exports = function(app) {
 	
 
 	app.get('/projects', function(req, res, next) {
+		var category = req.query.category
 
-		Models.Project.find( function(err, result) {
-			if(err) {
-				return res.send(404, err)
-			}
-			return res.send(200, result)
-		})
+		if(category) {
+			Models.Project.find( { category : category }, function(err, result) {
+				if(err) {
+					return res.send(404, err)
+				}
+				return res.send(200, result)
+			})
+		} else {
+			Models.Project.find( function(err, result) {
+				if(err) {
+					return res.send(404, err)
+				}
+				return res.send(200, result)
+			})
+		}
 	})
 
 	app.post('/fundProject', function(req, res, next) {
