@@ -18,7 +18,7 @@ module.exports = function(app) {
 	 * find all projects
 	 * optionally pass in filter parameters like category_id, cost, country, limit
 	 *
-	 * @param category_id {ObjectId} [Optional]. the category id to filter by
+	 * @param category {String} [Optional]. the category name to filter by
 	 * @param cost {Number} [Optional]. the cost to filter by
 	 * @param country {String} [Optional].
 	 * @param limit {Number} [Optional].
@@ -27,19 +27,22 @@ module.exports = function(app) {
 		
 		// remove null keys from query
 		// an example query might be: { category: category_id }
-		var query = _({
-			category: req.param('category_id'),
+		var query = {
+			category: req.param('category'),
 			cost: req.param('cost'),
 			country: req.param('country'),
 			limit: req.param('limit')
-		}).map(function(value, key, to_clean) { // filter null keys
+		}
+
+		_(query).map(function(value, key, to_clean) { // filter null keys
 			// || (_.isString(value) && _.trim(value).length === 0)
 			if (_.isNull(value) || _.isUndefined(value)) {
 			delete to_clean[key];
 			}	
 		});
 
-		Models.Project.find(query).populate('category').lean().exec().then(function(result) {
+		console.log(query)
+		Models.Project.find(query).lean().exec().then(function(result) {
 			return res.send(200, result)
 		}, function(err) {
 			return res.send(500, err)
@@ -52,7 +55,7 @@ module.exports = function(app) {
 	 */
 	app.get('/api/projects/:project_id', function(req, res, next) {
 		
-		Models.Project.findOne({ _id: req.param('project_id') }).populate('category').lean().exec().then(function(project) {
+		Models.Project.findOne({ _id: req.param('project_id') }).lean().exec().then(function(project) {
 			return res.send(200, project)
 		}, function(err) {
 			return res.send(500, err)

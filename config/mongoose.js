@@ -23,7 +23,7 @@ module.exports = function(database_name) {
 
 	var Project = new Schema({
 		name: { type: String },
-		category: { type: Schema.Types.ObjectId, ref: 'Category', required: true },
+		category: { type: String, required: true },
 		country: { type: String, required: true },
 		cost: { type: Number, required: true },
 		short_description: { type: String, required: true },
