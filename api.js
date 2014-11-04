@@ -64,10 +64,10 @@ module.exports = function(app) {
 			$addToSet: {
 				projects: req.param('project_id')
 			}
-		}, { upsert: true }).exec().then(function(donator) {
+		}, { upsert: true }).lean().exec().then(function(donator) {
 
 			return Models.Donation.create({
-				donator: donator.toObject()._id,
+				donator: donator._id,
 				amount: req.param('amount')
 			})
 
