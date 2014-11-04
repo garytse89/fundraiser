@@ -12,8 +12,11 @@ angular.module('distApp')
 			projects: {
 				method: 'GET',
 				url: baseUrl,
-				params: {
-					category_id: '@category_id'
+				params: { // this is just so that it is easier to see what the parameters are
+					category_id: '@category_id',
+					cost: '@cost',
+					country: '@country',
+					limit: '@limit'
 				},
 				isArray: true
 			},

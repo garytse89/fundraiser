@@ -15,14 +15,24 @@ module.exports = function(app) {
 	})
 
 	/**
-	 * find projects by category_id
-	 * if no category id is given, return all projects
+	 * find all projects
+	 * optionally pass in filter parameters like category_id, cost, country, limit
+	 *
+	 * @param category_id {ObjectId} [Optional]. the category id to filter by
+	 * @param cost {Number} [Optional]. the cost to filter by
+	 * @param country {String} [Optional].
+	 * @param limit {Number} [Optional].
 	 */
 	app.get('/api/projects', function(req, res, next) {
 		
 		// remove null keys from query
 		// an example query might be: { category: category_id }
-		var query = _(req.query).map(function(value, key, to_clean) {
+		var query = _({
+			category: req.param('category_id'),
+			cost: req.param('cost'),
+			country: req.param('country'),
+			limit: req.param('limit')
+		}).map(function(value, key, to_clean) { // filter null keys
 			// || (_.isString(value) && _.trim(value).length === 0)
 			if (_.isNull(value) || _.isUndefined(value)) {
 			delete to_clean[key];
