@@ -23,9 +23,11 @@ app.get('/', function(req, res, next) {
   return res.render('index.html')
 })
 
+require('./api')(app)
+
 app.set('port', process.env.PORT || 8080);
 
-global.Models = require('./config/mongoose')
+global.Models = require('./config/mongoose')('fundraising')
 
 http.createServer(app).listen(app.get('port'), function() {
   console.log('Express server for "Fundraiser" listening on port %s'.bold.green, app.get('port'));

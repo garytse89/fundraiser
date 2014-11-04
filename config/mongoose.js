@@ -18,8 +18,8 @@ module.exports = function(database_name) {
 
 	var Category = new Schema({
 		name: { type: String, required: true, unique: true },
-		description: { type: String, required: true }
-	})	
+		description: { type: String }
+	}, { collection: 'categories' })
 
 	var Project = new Schema({
 		name: { type: String },
@@ -28,20 +28,20 @@ module.exports = function(database_name) {
 		limit: { type: Number, required: true, default: 1 }, // most projects will disappear after being funded (limit=1); others might be repeatable
 		threshold: { type: Number, required: true }, // maximum amount needed to successfully fund it
 		category: { type: Schema.Types.ObjectId, ref: 'Category', required: true }
-	}).index({ name: 1 }, { unique: true, sparse: true })
+	}, { collection: 'projects' }).index({ name: 1 }, { unique: true, sparse: true })
 
 	var Donator = new Schema({
 		name: { type: String, required: true, unique: true },
 		email: { type: String, required: true },
 		phone_number: { type: String, required: true },
 		projects: [Project]
-	})
+	}, { collection: 'donators' })
 
 	var Donation = new Schema({
 		donator: { type: Schema.Types.ObjectId, ref: 'Donator', required: true },
 		created_at: { type: Date, default: Date.now, required: true },
 		amount: { type: Number, required: true }
-	})
+	}, { collection: 'donations'})
 
 	return {
 		Donator: db.model('Donator', Donator),
