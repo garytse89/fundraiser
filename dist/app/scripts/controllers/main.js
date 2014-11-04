@@ -13,4 +13,9 @@ angular.module('distApp')
     };
 
     $scope.loadProjects();
+
+    $scope.showProject = function(project_id, project_name) {
+    	var project_num = project_name.replace("Project ", "") // hacky
+    	location.href = '/#/project/' + project_num;
+    };
 });
