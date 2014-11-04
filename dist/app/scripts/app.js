@@ -1,6 +1,10 @@
 'use strict';
 
-angular.module('distApp', [])
+angular.module('distApp', [
+  'ngRoute',
+  'ngResource',
+  'ngSanitize'
+  ])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
