@@ -16,16 +16,24 @@ module.exports = function(database_name) {
 	})
 	var Schema = mongoose.Schema;
 
+	var Donator = new Schema({
+		name: String,
+		projects: [Project]
+	})
+
+	var Project = new Schema({
+		short_description: String,
+		description: String
+	})
+		
+	var Donation: new Schema({
+
+	})
+
 	return {
-		Donator: db.model('donator', new Schema({
-
-		})),
-		Project: db.model('project', new Schema({
-
-		})),
-		Donation: db.model('donation', new Schema({
-
-		}))
+		Donator: db.model('Donator', Donator),
+		Project: db.model('Project', Project),
+		Donation: db.model('Donation', Donation)
 	}
 
 }
