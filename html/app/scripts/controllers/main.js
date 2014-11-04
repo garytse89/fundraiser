@@ -8,10 +8,10 @@
  * Controller of the htmlApp
  */
 angular.module('htmlApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
+  .controller('MainCtrl', function ($scope, mainService) {
+    $scope.projects = [
+      'Rescue',
+      'Operations',
+      'Communications'
     ];
   });
