@@ -1,50 +1,35 @@
 var home_directory = __dirname;
-var path = require('path')
-// require from controller
-global.middleware = function(module) {
-	return require(path.join(home_directory, 'middleware', module))
-}
-// require from local modules
-global.local_module = function(module) {
-	return require(path.join(home_directory, 'local_modules', module))
-}
-// require from lib
-global.lib = function(module) {
-	return require(path.join(home_directory, 'lib', module))
-}
 
-process.on('uncaughtException', function(err) {
-  console.log(err.stack)
-})
+var express =  require('express');
 
-var express = require('express');
-var http = require('http');
-var app = express();
+app = express()
 
-global.app = app;
+var http = require('http'),
+    path = require('path'),
+  	connect = require('connect'),
+  	frontEndDir = 'dist/app/'
 
-app.set('port', process.env.PORT || 3000);
-app.set('views', path.join(__dirname, 'html'));
+app.set('views', path.join(__dirname, frontEndDir));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
-
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.bodyParser());
 app.use(express.methodOverride());
+// app.use(express.multipart());
+app.use(express.static(path.join(__dirname, frontEndDir)));
+
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
 
-// development only
-if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
-}
-
+// home page
 app.get('/', function(req, res, next) {
-  return res.render('app/views/main.html')
+  return res.render('index.html')
 })
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+app.set('port', process.env.PORT || 8080);
+
+global.Models = require('./config/mongoose')
+
+http.createServer(app).listen(app.get('port'), function() {
+  console.log('Express server listening on port %s', app.get('port'));
 });
+
+module.exports = app
