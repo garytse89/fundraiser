@@ -31,7 +31,7 @@ module.exports = function(app) {
 			category: req.param('category'),
 			cost: req.param('cost'),
 			country: req.param('country'),
-			limit: req.param('limit')
+			limit: { $gt : 0 }
 		}
 
 		_(query).map(function(value, key, to_clean) { // filter null keys
@@ -77,7 +77,8 @@ module.exports = function(app) {
 			$addToSet: {
 				projects: req.param('project_id')
 			}
-		}, { upsert: true }).lean().exec().then(function(donator) {
+		}, { upsert: true }).lean().exec()
+		.then(function(donator) {
 
 			console.log('\ndonation created\n')
 
@@ -86,12 +87,22 @@ module.exports = function(app) {
 				amount: req.param('amount')
 			})
 
-		}).then(function(result) {
+		})
+		.then(function(result) {
+
+			Models.Project.findOneAndUpdate({ 
+				_id: req.param('project_id') 
+			}, { 
+				$inc: { 
+					limit: -1 
+				} 
+			}).lean().exec()
+		})
+	    .then(function(result) {
 			return res.send(200, result)
 		}, function(err) {
 			console.log("ERR", err)
 			return res.send(500, err)
 		})
 	})
-
 }
