@@ -61,5 +61,23 @@
 		"short_description" : "Support a brothel rescue in December 2014 for trafficked underage girls",
 		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
 		"limit" : 1
+	},
+	{
+		"name" : "Project 8",
+		"category" : "Rehabilitation",
+		"country" : "Vietnam",
+		"cost" : 850,
+		"short_description" : "Provide medical care, including HIV support, for one girl rescued from sex trade",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 20",
+		"category" : "Investment",
+		"country" : "China",
+		"cost" : 5100,
+		"short_description" : "Police training workshops to build capacity to fight border trafficking to China",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 4
 	}
 ]
