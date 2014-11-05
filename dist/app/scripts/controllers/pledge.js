@@ -24,11 +24,9 @@ angular.module('distApp')
         phone_number: $scope.phone_number,
   			project_id: project_id 
   		}).$promise.then(function() {
-        console.log('okokok')
-  			// show indication that pledge worked
-  			// then redirect back to project page
-  			$location.path('/#/projects/' + project_id)
+  		  $location.path('/confirmation')
   		}, function(err) {
+        console.log("***ERROR***")
         console.log('ERR', err)
   			// show indication that pledge failed
   		})
