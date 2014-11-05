@@ -7,7 +7,7 @@ angular.module('distApp', [
   ])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider      
-      .when('/main/:project_category', {
+      .when('/projects', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })

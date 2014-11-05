@@ -3,7 +3,9 @@
 angular.module('distApp')
   .controller('MainCtrl', ['$scope', '$routeParams', 'API', function ($scope, $routeParams, API) {
 
-   $scope.projects = API.projects({ category: $routeParams.project_category})
-   $scope.categories = API.categories()
+  	var category = $routeParams.category
+
+   	$scope.projects = API.projects({ category: category })
+   	$scope.categories = API.categories()
 
 }]);
