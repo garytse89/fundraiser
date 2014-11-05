@@ -15,7 +15,7 @@ angular.module('distApp', [
         templateUrl: 'views/project.html',
         controller: 'ProjectCtrl'
       })
-      .when('/pledge', {
+      .when('/projects/:project_id/pledge', {
         templateUrl: 'views/pledge.html',
         controller: 'PledgeCtrl'
       })

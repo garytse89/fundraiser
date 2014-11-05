@@ -26,6 +26,9 @@ angular.module('distApp')
 			},
 			fund: {
 				method: 'POST',
+				params: {
+					project_id: '@project_id'
+				},
 				url: baseUrl + '/:project_id/fund'
 			}
 		})
