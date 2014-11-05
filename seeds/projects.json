@@ -4,7 +4,7 @@
 		"category" : "Rescue",
 		"country" : "Cambodia",
 		"cost" : 595,
-		"short_description" : "Reintegrate a child rescued from sexual exploitation with his or her family ",
+		"short_description" : "Reintegrate a child rescued from sexual exploitation with his or her family",
 		"description" : "Reintegrate a child rescued from sexual exploitation with his or her family ",
 		"limit" : 1	
 	},
@@ -72,12 +72,237 @@
 		"limit" : 1
 	},
 	{
+		"name" : "Project 9",
+		"category" : "Rehabilitation",
+		"country" : "Singapore",
+		"cost" : 850,
+		"short_description" : "Provide English language & computer classes to empower an exploited labor migrant",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 10",
+		"category" : "Rehabilitation",
+		"country" : "Vietnam",
+		"cost" : 1300,
+		"short_description" : "Support education for a child rescued from bonded labor",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 11",
+		"category" : "Rehabilitation",
+		"country" : "Cambodia",
+		"cost" : 1980,
+		"short_description" : "Provide legal aid for prosecution and compensation to a survivor of trafficking",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 12",
+		"category" : "Rehabilitation",
+		"country" : "Singapore",
+		"cost" : 3200,
+		"short_description" : "Provide shelter, counselling, and legal aid to a survivor of exploited labor migration",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 99999
+	},
+	{
+		"name" : "Project 13",
+		"category" : "Rehabilitation",
+		"country" : "Vietnam",
+		"cost" : 4600,
+		"short_description" : "Provide housing for one rescued survivor who are unable to reintegrate due to social stigma",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 99999
+	},
+	{
+		"name" : "Project 14",
+		"category" : "Rehabilitation",
+		"country" : "Nepal",
+		"cost" : 6100,
+		"short_description" : "Support schooling and family income to invest in the future of a rescued child",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 15",
+		"category" : "Rehabilitation",
+		"country" : "Nepal",
+		"cost" : 8250,
+		"short_description" : "Provide food, clothing, & education for one month, for a child who is unable to be reintegrated",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 23
+	},
+	{
+		"name" : "Project 16",
+		"category" : "Rehabilitation",
+		"country" : "Malaysia",
+		"cost" : 10500,
+		"short_description" : "Support counselling and group therapy sessions for children rescued from trafficking",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 17",
+		"category" : "Rehabilitation",
+		"country" : "Nepal",
+		"cost" : 13500,
+		"short_description" : "Support counselling for children rescued from abuse to rebuild their dignity",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 18",
+		"category" : "Rehabilitation",
+		"country" : "Nepal",
+		"cost" : 16400,
+		"short_description" : "Support post-rescue ad hoc needs of rescued children (clothes, medical, family transport",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 19",
+		"category" : "Rehabilitation",
+		"country" : "Nepal",
+		"cost" : 30250,
+		"short_description" : "Provide transitional shelter rescued children outside Kathmandu for a month",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
 		"name" : "Project 20",
+		"category" : "Rehabilitation",
+		"country" : "Nepal",
+		"cost" : 46500,
+		"short_description" : "Provide reintegration support for a child for one month",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 21",
 		"category" : "Investment",
-		"country" : "China",
+		"country" : "Vietnam",
 		"cost" : 5100,
-		"short_description" : "Police training workshops to build capacity to fight border trafficking to China",
+		"short_description" : "Provide medical care, including HIV support, for one girl rescued from sex trade",
 		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
 		"limit" : 4
+	},
+	{
+		"name" : "Project 22",
+		"category" : "Investment",
+		"country" : "Nepal",
+		"cost" : 6800,
+		"short_description" : "Support an ongoing investigation in fraudulent and abusive orphanages in Kathmandu",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 4
+	},
+	{
+		"name" : "Project 23",
+		"category" : "Investment",
+		"country" : "Cambodia",
+		"cost" : 10200,
+		"short_description" : "Support a workshop to educate government officials on trafficking in persons issues",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 24",
+		"category" : "Investment",
+		"country" : "Malaysia",
+		"cost" : 13000,
+		"short_description" : "Support training for government & NGO officials on best practices to handle victims",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 4
+	},
+	{
+		"name" : "Project 25",
+		"category" : "Investment",
+		"country" : "Malaysia",
+		"cost" : 13000,
+		"short_description" : "Fund social workers to identify trafficking victims with UN Refugee Agency",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 26",
+		"category" : "Investment",
+		"country" : "Nepal",
+		"cost" : 13250,
+		"short_description" : "Identify and trace the families of children rescued from abusive orphanages",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 27",
+		"category" : "Investment",
+		"country" : "Nepal",
+		"cost" : 13600,
+		"short_description" : "Launch the first ever dedicated research project into Nepal’s 700+ orphanages",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 28",
+		"category" : "Investment",
+		"country" : "Cambodia",
+		"cost" : 15000,
+		"short_description" : "Maintain the operation of a 24 hour NGO-run hotline to report trafficking",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 29",
+		"category" : "Investment",
+		"country" : "Malaysia",
+		"cost" : 15800,
+		"short_description" : "Fund SUKA Society’s entire 2015 administrative costs to support trafficked children",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 30",
+		"category" : "Investment",
+		"country" : "Vietnam",
+		"cost" : 21300,
+		"short_description" : "Support a registration campaign to provide legal documents to 500 villagers in 2015",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 31",
+		"category" : "Investment",
+		"country" : "Cambodia",
+		"cost" : 34000,
+		"short_description" : "Fund critical comms, surveillance, and tech equipment for 2015 slavery investigations",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 32",
+		"category" : "Investment",
+		"country" : "Vietnam",
+		"cost" : 51200,
+		"short_description" : "Fund a grassroots awareness campaign over radio and media to share survivors’ stories",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 33",
+		"category" : "Investment",
+		"country" : "Cambodia",
+		"cost" : 52500,
+		"short_description" : "Fund a media campaign to facilitate education, awareness and vigilance on trafficking",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
+	},
+	{
+		"name" : "Project 34",
+		"category" : "Investment",
+		"country" : "Nepal",
+		"cost" : 162200,
+		"short_description" : "Fund a Child Trauma Management Centre, an innovative home for those rescued from abuse",
+		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
+		"limit" : 1
 	}
 ]
