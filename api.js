@@ -68,7 +68,7 @@ module.exports = function(app) {
 	 * if the donator is not new, update the donator by adding the project to the set of projects
 	 */
 	app.post('/api/projects/:project_id/fund', function(req, res, next) {
-		console.log('fundfund')
+		console.log('\nfunding api called\n')
 		Models.Donator.findOneAndUpdate({
 			name: req.param('name'),
 			email: req.param('email'),
@@ -79,6 +79,8 @@ module.exports = function(app) {
 			}
 		}, { upsert: true }).lean().exec().then(function(donator) {
 
+			console.log('\ndonation created\n')
+
 			return Models.Donation.create({
 				donator: donator._id,
 				amount: req.param('amount')
@@ -87,6 +89,7 @@ module.exports = function(app) {
 		}).then(function(result) {
 			return res.send(200, result)
 		}, function(err) {
+			console.log("ERR", err)
 			return res.send(500, err)
 		})
 	})

@@ -2,3 +2,12 @@ thover:hover, thover:focus: {
 	border-color: #428bca !important;
 	color: white !important;
 }
+
+.btn-xlarge {
+    padding: 30px 50px;
+    font-size: 50px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    }

@@ -5,12 +5,12 @@
 
     <form role="form" ng-submit="fund()">
       <div class="form-group">
-        <label for="email">Pledge Amount</label>
-        <input type="Number" ng-model="amount" ng-disabled="amountDisabled" class="form-control" required>
+        <label for="email">Pledge Amount (HKD)</label>
+        <input type="Number" ng-model="amount" ng-disabled="amountDisabled" class="form-control" required placeholder="{{ amount }}">
       </div>
       <div class="form-group">
         <label for="firstName">First Name</label>
-        <input ng-model="name" class="form-control" id="firstName" required placeholder="Enter first name">
+        <input ng-model="first_name" class="form-control" id="firstName" required placeholder="Enter first name">
       </div>
       <div class="form-group">
         <label for="lastName">Last Name</label>

@@ -16,7 +16,8 @@ angular.module('distApp')
 					category_id: '@category_id',
 					cost: '@cost',
 					country: '@country',
-					limit: '@limit'
+					limit: '@limit',
+					category: '@category'
 				},
 				isArray: true
 			},

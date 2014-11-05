@@ -8,23 +8,28 @@ angular.module('distApp')
   	$scope.amountDisabled = false;
 
   	API.project({ project_id: project_id }).$promise.then(function(project) {
-  		if (project.cost < 40000) {
-  			$scope.amount = 40000
+  		$scope.amount = project.cost // the user won't be able to set the pledge amount
+      // and it will default to the cost of the project if under 40k
+      if (project.cost < 40000) {
   			$scope.amountDisabled = true
   		}
+      console.log($scope.amountDisabled)
   	})
 
   	$scope.fund = function() {
   		API.fund({ 
-  			name: [$scope.first_name, $scope.lastname].join(' '),
+  			name: [$scope.first_name, $scope.last_name].join(' '),
   			email: $scope.email,
   			amount: $scope.amount,
+        phone_number: $scope.phone_number,
   			project_id: project_id 
   		}).$promise.then(function() {
+        console.log('okokok')
   			// show indication that pledge worked
   			// then redirect back to project page
   			$location.path('/#/projects/' + project_id)
   		}, function(err) {
+        console.log('ERR', err)
   			// show indication that pledge failed
   		})
   	}
