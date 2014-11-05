@@ -15,6 +15,10 @@ angular.module('distApp', [
         templateUrl: 'views/project.html',
         controller: 'ProjectCtrl'
       })
+      .when('/pledge', {
+        templateUrl: 'views/pledge.html',
+        controller: 'PledgeCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

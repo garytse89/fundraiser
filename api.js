@@ -68,7 +68,7 @@ module.exports = function(app) {
 	 * if the donator is not new, update the donator by adding the project to the set of projects
 	 */
 	app.post('/api/projects/:project_id/fund', function(req, res, next) {
-
+		console.log('fundfund')
 		Models.Donator.findOneAndUpdate({
 			name: req.param('name'),
 			email: req.param('email'),
