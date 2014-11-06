@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('distApp')
-  .controller('ProjectCtrl', ['$scope', '$routeParams', 'API', function($scope, $routeParams, API) {
+  .controller('ProjectCtrl', ['$scope', '$routeParams', 'API', '$http', function($scope, $routeParams, API, $http) {
 
   	var project_id = $routeParams.project_id;
   	// amount field is enabled by default
@@ -18,28 +18,34 @@ angular.module('distApp')
       	console.log($scope.amountDisabled)
 	})
 
-  	$scope.fund = function() {
-  		API.fund({ 
-  			name: [$scope.first_name, $scope.last_name].join(' '),
-  			email: $scope.email,
-  			amount: $scope.amount,
-  			address: $scope.address,
-        	phone_number: $scope.phone_number,
-  			project_id: project_id 
-  		}).$promise.then(function() {
-  			$scope.showSuccessLabel = true
-  			$scope.showErrorLabel = false
-  		}, function(err) {
-  			$scope.showSuccessLabel = false
-  			$scope.showErrorLabel = true
-        console.log("***ERROR***")
-        console.log('ERR', err)
-  			// show indication that pledge failed
-  		})
-  	}
+	$scope.fund = function() {
+		API.fund({ 
+			name: [$scope.first_name, $scope.last_name].join(' '),
+			email: $scope.email,
+			amount: $scope.amount,
+			address: $scope.address,
+      	phone_number: $scope.phone_number,
+			project_id: project_id 
+		}).$promise.then(function() {
+			$scope.showSuccessLabel = true
+			$scope.showErrorLabel = false
+		}, function(err) {
+			$scope.showSuccessLabel = false
+			$scope.showErrorLabel = true
+      console.log("***ERROR***")
+      console.log('ERR', err)
+			// show indication that pledge failed
+		})
+	}
 
-    $scope.names = ['Alicia', 'Alice', 'Anonymous'];
+  $scope.relateIQ_contacts = {}
+  $scope.relateIQ_contacts.first_names = window.first_names
+  $scope.relateIQ_contacts.last_names = window.last_names
+  $scope.relateIQ_contacts.emails = window.emails
+  $scope.relateIQ_contacts.phone_numbers = window.phone_numbers
+  $scope.relateIQ_contacts.addresses = window.addresses
 
+  
 }]);
 
 
