@@ -1,9 +1,6 @@
 <div class="row">
-	<div class="alert alert-warning" ng-show="showAlreadyFundedLabel" role="alert">
-		<strong>Warning!</strong> This project has just been funded.
-	</div>
 
-	<div class="col-md-8">
+	<div class="col-md-12">
 		<ol class="breadcrumb">
 		  <li><a href="#">Home</a></li>
 		  <li><a ng-href="#/projects?category={{ project.category }}">Projects</a></li>
@@ -12,53 +9,10 @@
 
 		<h1><b>{{ project.name }}</b></h1>
 		<hr />
+		<div class="alert alert-warning" ng-show="alreadyFunded" role="alert">
+			<strong>Warning!</strong> This project has been funded.
+		</div>
 		<p>{{ project.description }}</p>
+		<a class="btn btn-success" ng-disabled="alreadyFunded" ng-href="/#/projects/{{ project._id }}/pledge">Fund Now</a>
 	</div>
-
-	<div class="col-md-4">
-
-	<div class="alert alert-success" ng-show="showSuccessLabel" role="alert">
-		<strong>Thank You!</strong> Your pledge has been received.
-	</div>
-	<div class="alert alert-danger" ng-show="showWarningLabel" role="alert">
-		<strong>Warning!</strong> Your pledge failed to register. Please try again.
-	</div>
-
-    <h1 style="margin-top:0">Pledge Form</h1>
-    <hr />
-
-    <form role="form" ng-submit="fund()">
-      <div class="form-group">
-        <label for="email">Pledge Amount (HKD)</label>
-        <input type="Number" ng-model="amount" ng-disabled="amountDisabled" class="form-control" required placeholder="{{ amount }}">
-      </div>
-      <div class="form-group">
-        <label for="firstName">First Name</label>
-        <input ng-model="first_name" class="form-control" id="firstName" required placeholder="Enter first name" autocomplete="off" typeahead="name for name in relateIQ_contacts.first_names | filter:$viewValue | limitTo:5" typeahead-min-length="2" typeahead-on-select="onSelect()">
-      </div>
-      <div class="form-group">
-        <label for="lastName">Last Name</label>
-        <input ng-model="last_name" class="form-control" id="lastName" required placeholder="Enter last name" autocomplete="off" typeahead="name for name in relateIQ_contacts.last_names" autocomplete="off">
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input ng-model="email" class="form-control" id="email" required placeholder="Enter email" autocomplete="off">
-      </div>
-      <div class="form-group">
-        <label for="phone_number">Phone Number</label>
-        <input ng-model="phone_number" class="form-control" id="phone_number" required placeholder="Enter phone number" autocomplete="off">
-      </div>
-      <div class="form-group">
-        <label for="address">Address (optional)</label>
-        <input ng-model="address" class="form-control" id="address" placeholder="Enter your address" autocomplete="off">
-      </div>
-      <div class="form-group">
-	      <button type="submit" class="btn btn-success">Pledge Now</button>
-	  </div>
-    </form>
-  </div>
-</div>
-
-<div class="footer">
-  <p>From The Graduate team</p>
 </div>

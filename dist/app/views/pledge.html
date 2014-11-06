@@ -1,9 +1,24 @@
 <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-8 col-md-offset-2">
+    <ol class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a ng-href="#/projects?category={{ project.category }}">Projects</a></li>
+      <li><a ng-href="#/projects/{{ project._id }}">{{ project.name }}</a></li>
+      <li class="active">Pledge</li>
+    </ol>
 
-    <h1>Pledge Form</h1>
+    <div class="alert alert-warning" ng-show="alreadyFunded" role="alert">
+      <strong>Warning!</strong> This project has just been funded.
+    </div>
 
-    <form role="form" ng-submit="fund()">
+    <div class="alert alert-success" ng-show="showSuccessLabel" role="alert">
+      <strong>Thank You!</strong> Your pledge has been received.
+    </div>
+    <div class="alert alert-danger" ng-show="showWarningLabel" role="alert">
+      <strong>Warning!</strong> Your pledge failed to register. Please try again.
+    </div>
+
+    <form role="form" ng-submit="pledge()">
       <div class="form-group">
         <label for="email">Pledge Amount (HKD)</label>
         <input type="Number" ng-model="amount" ng-disabled="amountDisabled" class="form-control" required placeholder="{{ amount }}">
@@ -24,8 +39,16 @@
         <label for="phone_number">Phone Number</label>
         <input ng-model="phone_number" class="form-control" id="phone_number" required placeholder="Enter phone number">
       </div>
-      <button type="submit" class="btn btn-success">Submit</button>
-    </form>
+
+        <div style="color:#916f35" class="alert alert-warning" role="alert"><strong>Please review your project choice</strong>
+            <hr />
+            <p>I would like to sponsor a {{ project.category | lowercase }} project and pledge <strong>HKD {{ amount }}</strong> that will go towards <strong>{{ project.name | lowercase }}</strong>.<br /><br />
+
+              My contact details are:
+            </p>
+          </div>
+          <button type="submit" ng-disabled="alreadyFunded" class="btn btn-success">Submit Pledge</button>
+     </form>
 
   </div>
 </div>
