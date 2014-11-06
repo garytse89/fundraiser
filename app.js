@@ -56,4 +56,6 @@ io.adapter(socketio_redis({
   subClient: subClient 
 }))
 
+require('./socket_api')(io)
+
 module.exports = app

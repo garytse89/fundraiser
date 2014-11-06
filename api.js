@@ -1,4 +1,4 @@
-var _ = require('underscore')
+var _ = require('underscore');
 
 module.exports = function(app) {
 
@@ -66,7 +66,7 @@ module.exports = function(app) {
 	 * fund a project
 	 * if the donator is new, create a new donator object and add the project
 	 * if the donator is not new, update the donator by adding the project to the set of projects
-	 */
+	 
 	app.post('/api/projects/:project_id/fund', function(req, res, next) {
 		console.log('\nfunding api called\n')
 		Models.Donator.findOneAndUpdate({
@@ -83,27 +83,24 @@ module.exports = function(app) {
 
 			console.log('\ndonation created\n')
 
-			return Models.Donation.create({
-				donator: donator._id,
-				amount: req.param('amount')
-			})
-
-		})
-		.then(function(result) {
-
-			Models.Project.findOneAndUpdate({ 
-				_id: req.param('project_id') 
-			}, { 
-				$inc: { 
-					limit: -1 
-				} 
-			}).lean().exec()
-		})
-	    .then(function(result) {
+			return q.all([
+				Models.Donation.create({
+					donator: donator._id,
+					amount: req.param('amount')
+				}),
+				Models.Project.findOneAndUpdate({ 
+					_id: req.param('project_id') 
+				}, { 
+					$inc: { 
+						limit: -1 
+					} 
+				}).lean().exec()
+			])
+		}).then(function(result) {
 			return res.send(200, result)
 		}, function(err) {
 			console.log("ERR", err)
 			return res.send(500, err)
 		})
-	})
+	})*/
 }

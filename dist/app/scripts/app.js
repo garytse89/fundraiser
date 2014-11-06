@@ -5,7 +5,8 @@ angular.module('distApp', [
   'ngResource',
   'ngSanitize',
   'ui.bootstrap',
-  'ui.bootstrap.typeahead'
+  'ui.bootstrap.typeahead',
+  'btford.socket-io'
   ])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider      
