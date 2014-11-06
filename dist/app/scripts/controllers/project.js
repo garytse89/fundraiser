@@ -1,5 +1,11 @@
 'use strict';
 
+// autocomplete
+
+$("#firstName").autocomplete({
+	source: ["Lucy"]
+});
+
 angular.module('distApp')
   .controller('ProjectCtrl', ['$scope', '$routeParams', 'API', function($scope, $routeParams, API) {
 
@@ -39,3 +45,5 @@ angular.module('distApp')
   	}
 
 }]);
+
+
