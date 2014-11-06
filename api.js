@@ -1,4 +1,5 @@
-var _ = require('underscore');
+var _ = require('underscore'),
+	RelateIQ = require('relateiq');
 
 module.exports = function(app) {
 
@@ -65,47 +66,14 @@ module.exports = function(app) {
 	app.get('/api/relateIQContacts', function(req, res, next) {
 		// contact relate iq API and return contacts
 		// needs to be done this way so we dont expost our API key and secret
+		
+		var relateiq = new RelateIQ(process.env.RELATEIQ_API_KEY, process.env.RELATEIQ_SECRET)
+		
+		relateiq.getContacts(function(contacts) {
+			console.log(contacts)
+			return res.send(200, contacts)
+		})
+		
 	})
 
-	/**
-	 * fund a project
-	 * if the donator is new, create a new donator object and add the project
-	 * if the donator is not new, update the donator by adding the project to the set of projects
-	 
-	app.post('/api/projects/:project_id/fund', function(req, res, next) {
-		console.log('\nfunding api called\n')
-		Models.Donator.findOneAndUpdate({
-			name: req.param('name'),
-			email: req.param('email'),
-			phone_number: req.param('phone_number'),
-			address: req.param('address')
-		}, {
-			$addToSet: {
-				projects: req.param('project_id')
-			}
-		}, { upsert: true }).lean().exec()
-		.then(function(donator) {
-
-			console.log('\ndonation created\n')
-
-			return q.all([
-				Models.Donation.create({
-					donator: donator._id,
-					amount: req.param('amount')
-				}),
-				Models.Project.findOneAndUpdate({ 
-					_id: req.param('project_id') 
-				}, { 
-					$inc: { 
-						limit: -1 
-					} 
-				}).lean().exec()
-			])
-		}).then(function(result) {
-			return res.send(200, result)
-		}, function(err) {
-			console.log("ERR", err)
-			return res.send(500, err)
-		})
-	})*/
 }
