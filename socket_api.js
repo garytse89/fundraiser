@@ -26,9 +26,9 @@ module.exports = function(io) {
 			.then(function(donator) {
 
 				// broadcast event to project channel (goes to everybody except the current user)
-				socket.emit('project::funded', { project_id: data.project_id, amount: data.amount });
+				io.emit('project::funded', { project_id: data.project_id, amount: data.amount });
 				// broadcast event to main channel for progress bar (broadcast to everybody including current user)
-				socket.emit('pledge::new', { project_id: data.project_id, amount: data.amount })
+				io.emit('pledge::new', { project_id: data.project_id, amount: data.amount })
 
 				return q.all([
 					Models.Donation.create({
