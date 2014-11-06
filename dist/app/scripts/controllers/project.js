@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('distApp')
-  .controller('ProjectCtrl', ['$scope', '$routeParams', 'API', '$http', function($scope, $routeParams, API, $http) {
+  .controller('ProjectCtrl', ['$scope', '$routeParams', 'API', 'Socket', function($scope, $routeParams, API, Socket) {
 
   	var project_id = $routeParams.project_id;
   	// amount field is enabled by default
@@ -19,24 +19,24 @@ angular.module('distApp')
 	})
 
 	$scope.fund = function() {
-		API.fund({ 
+		Socket.emit('project::fund', {
 			name: [$scope.first_name, $scope.last_name].join(' '),
 			email: $scope.email,
 			amount: $scope.amount,
 			address: $scope.address,
-      	phone_number: $scope.phone_number,
+      		phone_number: $scope.phone_number,
 			project_id: project_id 
-		}).$promise.then(function() {
-			$scope.showSuccessLabel = true
-			$scope.showErrorLabel = false
 		}, function(err) {
-			$scope.showSuccessLabel = false
-			$scope.showErrorLabel = true
-      console.log("***ERROR***")
-      console.log('ERR', err)
-			// show indication that pledge failed
+			if (err) $scope.showErrorLabel = true;
+			$scope.showSuccessLabel = true
 		})
 	}
+
+	Socket.on('project::funded', function(data) {
+		if (data.project_id == project_id) {
+			$scope.showAlreadyFundedLabel = true
+		}
+	})
 
   $scope.relateIQ_contacts = {}
   $scope.relateIQ_contacts.first_names = window.first_names
