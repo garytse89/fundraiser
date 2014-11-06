@@ -31,7 +31,7 @@
       </div>
       <div class="form-group">
         <label for="firstName">First Name</label>
-        <input ng-model="first_name" class="form-control" id="firstName" required placeholder="Enter first name">
+        <input ng-model="first_name" class="form-control" id="firstName" required placeholder="Enter first name" autocomplete="off" typeahead="name for name in names">
       </div>
       <div class="form-group">
         <label for="lastName">Last Name</label>

@@ -3,7 +3,9 @@
 angular.module('distApp', [
   'ngRoute',
   'ngResource',
-  'ngSanitize'
+  'ngSanitize',
+  'ui.bootstrap',
+  'ui.bootstrap.typeahead'
   ])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider      

@@ -1,11 +1,5 @@
 'use strict';
 
-// autocomplete
-
-$("#firstName").autocomplete({
-	source: ["Lucy"]
-});
-
 angular.module('distApp')
   .controller('ProjectCtrl', ['$scope', '$routeParams', 'API', function($scope, $routeParams, API) {
 
@@ -43,6 +37,8 @@ angular.module('distApp')
   			// show indication that pledge failed
   		})
   	}
+
+    $scope.names = ['Alicia', 'Alice', 'Anonymous'];
 
 }]);
 
