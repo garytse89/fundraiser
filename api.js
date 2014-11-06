@@ -72,7 +72,8 @@ module.exports = function(app) {
 		Models.Donator.findOneAndUpdate({
 			name: req.param('name'),
 			email: req.param('email'),
-			phone_number: req.param('phone_number')
+			phone_number: req.param('phone_number'),
+			address: req.param('address')
 		}, {
 			$addToSet: {
 				projects: req.param('project_id')

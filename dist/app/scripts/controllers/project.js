@@ -23,7 +23,8 @@ angular.module('distApp')
   			name: [$scope.first_name, $scope.last_name].join(' '),
   			email: $scope.email,
   			amount: $scope.amount,
-        phone_number: $scope.phone_number,
+  			address: $scope.address,
+        	phone_number: $scope.phone_number,
   			project_id: project_id 
   		}).$promise.then(function() {
   			$scope.showSuccessLabel = true

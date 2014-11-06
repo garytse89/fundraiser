@@ -35,6 +35,7 @@ module.exports = function(database_name) {
 		name: { type: String, required: true, unique: true },
 		email: { type: String, required: true },
 		phone_number: { type: String, required: true },
+		address: { type: String },
 		projects: [{ type: Schema.Types.ObjectId, ref: 'Project' }]
 	}, { collection: 'donators' })
 
