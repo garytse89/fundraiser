@@ -45,7 +45,18 @@ angular.module('distApp')
   $scope.relateIQ_contacts.phone_numbers = window.phone_numbers
   $scope.relateIQ_contacts.addresses = window.addresses
 
-  
+  $scope.onSelect = function() {
+    // get the index of the selected first_name in the array, then autofill based on 
+    // the same array index
+    var i = window.first_names.indexOf($scope.first_name)
+
+    // did not bother doing the autofill for other parameters for now
+
+    $scope.last_name = window.last_names[i]
+    $scope.email = window.emails[i]
+    $scope.phone_number = window.phone_numbers[i]
+    $scope.addresses = window.addresses[i]
+  };
 }]);
 
 

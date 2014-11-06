@@ -31,23 +31,23 @@
       </div>
       <div class="form-group">
         <label for="firstName">First Name</label>
-        <input ng-model="first_name" class="form-control" id="firstName" required placeholder="Enter first name" autocomplete="off" typeahead="name for name in relateIQ_contacts.first_names">
+        <input ng-model="first_name" class="form-control" id="firstName" required placeholder="Enter first name" autocomplete="off" typeahead="name for name in relateIQ_contacts.first_names | filter:$viewValue | limitTo:5" typeahead-min-length="2" typeahead-on-select="onSelect()">
       </div>
       <div class="form-group">
         <label for="lastName">Last Name</label>
-        <input ng-model="last_name" class="form-control" id="lastName" required placeholder="Enter last name" autocomplete="off" typeahead="name for name in relateIQ_contacts.last_names">
+        <input ng-model="last_name" class="form-control" id="lastName" required placeholder="Enter last name" autocomplete="off" typeahead="name for name in relateIQ_contacts.last_names" autocomplete="off">
       </div>
       <div class="form-group">
         <label for="email">Email</label>
-        <input ng-model="email" class="form-control" id="email" required placeholder="Enter email">
+        <input ng-model="email" class="form-control" id="email" required placeholder="Enter email" autocomplete="off">
       </div>
       <div class="form-group">
         <label for="phone_number">Phone Number</label>
-        <input ng-model="phone_number" class="form-control" id="phone_number" required placeholder="Enter phone number">
+        <input ng-model="phone_number" class="form-control" id="phone_number" required placeholder="Enter phone number" autocomplete="off">
       </div>
       <div class="form-group">
         <label for="address">Address (optional)</label>
-        <input ng-model="address" class="form-control" id="address" placeholder="Enter your address">
+        <input ng-model="address" class="form-control" id="address" placeholder="Enter your address" autocomplete="off">
       </div>
       <div class="form-group">
 	      <button type="submit" class="btn btn-success">Pledge Now</button>

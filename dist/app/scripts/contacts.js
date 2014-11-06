@@ -1148,22 +1148,31 @@ for( var i in contacts.objects ) {
         var lastName = name.split(" ")[1]
         window.first_names.push(firstName)
         window.last_names.push(lastName)
-    } catch(err){}
+    } catch(err){
+        window.first_names.push("")
+        window.last_names.push("")
+    }
 
     try {
         var email = contacts.objects[i].properties.email[0].value
         window.emails.push(email)
-    } catch(err){}
+    } catch(err){
+        window.emails.push("")
+    }
 
     try {
         var phone_number = contacts.objects[i].properties.phone[0].value
         window.phone_numbers.push(phone_number)
-    } catch(err){}
+    } catch(err){
+        window.phone_numbers.push("")
+    }
 
     try {
         var address = contacts.objects[i].properties.address[0].value
         window.addresses.push(address)
-    } catch(err){}
+    } catch(err){
+        window.addresses.push("")
+    }
 } 
 
 console.log(window.first_names)
