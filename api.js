@@ -62,6 +62,11 @@ module.exports = function(app) {
 		})
 	})
 
+	app.get('/api/relateIQContacts', function(req, res, next) {
+		// contact relate iq API and return contacts
+		// needs to be done this way so we dont expost our API key and secret
+	})
+
 	/**
 	 * fund a project
 	 * if the donator is new, create a new donator object and add the project

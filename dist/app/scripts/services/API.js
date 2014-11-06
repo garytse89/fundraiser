@@ -39,3 +39,16 @@ angular.module('distApp')
 			}
 		})
 	}])
+	.factory('RelateIQ', ['$resource', function ($resource) {
+		var baseUrl = '/api/relateIQContacts'
+		return $resource(baseUrl, null, {
+			contacts: {
+				method: 'GET',
+				params: {
+					start: '@start',
+					limit: '@limit'
+				},
+				isArray: true
+			}
+		})
+	}])
