@@ -46,12 +46,13 @@ angular.module('distApp')
   		$scope.$apply(function() {
 		    _($scope.projects).map(function(project) {
 		    	if (project._id == data.project_id) {
-            // get limit here. fuck it
             API.project({ project_id: project._id }).$promise.then(function(p) {
               if (p.limit <= 0) {
   		    		  project.funded = true // if project had 1 donation count remaining
               }
 
+              console.log('remaining limits = ', p.limit)
+              console.log('project.funded = ', project.funded)
               var numInWords = toWords(p.limit)
               numInWords = toTitleCase(numInWords)
               project.countRemaining = numInWords
