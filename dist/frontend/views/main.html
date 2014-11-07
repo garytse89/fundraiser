@@ -30,11 +30,18 @@
         <div style="height:320px" class="thumbnail">
           <div class="caption">
             <h3><b>{{ project.name }}</b></h3>
-            <p><b>Status: </b><span ng-show="project.funded" class="label label-sm label-danger">Funded</span><span ng-show="!project.funded" class="label label-sm label-success">Available</span></p><p>
-            </p><p><b>Type: </b>{{ project.category }}</p>
+            <p><b>Status: </b>
+              <!-- <span ng-show="project.limit <= 0" class="label label-sm label-danger">Funded</span>
+              <span ng-show="project.limit > 0" class="label label-sm label-success">Available</span> -->
+              <span ng-show="project.funded" class="label label-sm label-danger">Funded</span>
+              <span ng-show="!project.funded" class="label label-sm label-success">Available</span>
+            </p><p>
+            <!-- <p><b>Type: </b>{{ project.category }}</p>
             <p><b>Country: </b>{{ project.country }}</p>
             <p><b>Cost: </b>{{ project.cost }}</p>
-            <p style="height: 38px;display:block">{{ project.short_description | limitTo:74 }}<span ng-show="project.short_description.length > 74">...</span></p>
+            <p style="height: 38px;display:block">{{ project.short_description | limitTo:74 }}<span ng-show="project.short_description.length > 74" >...</span></p> -->
+
+            </p><p>ProjectSubType / {{ project.country }} / {{ project.short_description }} / <b>${{ project.cost }}</b></p>
             <p style="padding-top:30px"><a class="btn btn-default" role="button" ng-href="#/projects/{{ project._id }}">Find Out More!</a></p>
           </div>
         </div>
