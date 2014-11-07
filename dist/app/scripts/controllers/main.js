@@ -8,7 +8,12 @@ angular.module('distApp')
     API.projects({ category: $scope.category }).$promise.then(function(projects) {
       $scope.projects = projects
       angular.forEach(projects, function(project) {
-        if (project.limit <= 0 ) project.funded = true
+        if (project.limit <= 0 ) {
+          project.funded = true
+        }
+        var numInWords = toWords(project.limit)
+        numInWords = toTitleCase(numInWords)
+        project.countRemaining = numInWords
       })
     })
 
@@ -29,6 +34,9 @@ angular.module('distApp')
         $scope.projects = projects
         angular.forEach(projects, function(project) {
           if (project.limit <= 0 ) project.funded = true
+          var numInWords = toWords(project.limit)
+          numInWords = toTitleCase(numInWords)
+          project.countRemaining = numInWords
         })
       })
    		$scope.current_category = category
@@ -38,7 +46,16 @@ angular.module('distApp')
   		$scope.$apply(function() {
 		    _($scope.projects).map(function(project) {
 		    	if (project._id == data.project_id) {
-		    		project.funded = true
+            // get limit here. fuck it
+            API.project({ project_id: project._id }).$promise.then(function(p) {
+              if (p.limit <= 0) {
+  		    		  project.funded = true // if project had 1 donation count remaining
+              }
+
+              var numInWords = toWords(p.limit)
+              numInWords = toTitleCase(numInWords)
+              project.countRemaining = numInWords
+            })
 		    	}
 		    	return project
 		    })
@@ -46,3 +63,8 @@ angular.module('distApp')
 	  })
 
 }]);
+
+function toTitleCase(str)
+{
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+}

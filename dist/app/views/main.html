@@ -32,13 +32,17 @@
       <div ng-repeat="project in projects" class="col-sm-6 col-md-4">
         <div style="height:320px" class="thumbnail">
           <div class="caption">
-            <h3><b>{{ project.name }}</b></h3>
+            <h3><b>
+              <span ng-show="project.repeated">*</span>{{ project.name }}
+              </b>
+            </h3>
             <p><b>Status: </b>
               <!-- <span ng-show="project.limit <= 0" class="label label-sm label-danger">Funded</span>
               <span ng-show="project.limit > 0" class="label label-sm label-success">Available</span> -->
               <span ng-show="project.funded" class="label label-sm label-danger">Funded</span>
               <span ng-show="!project.funded" class="label label-sm label-success">Available</span>
             <p>
+            <p><span ng-show="project.repeated && !project.funded"><i><b>*{{ project.countRemaining }} ${{ project.cost }} donations are needed to complete this project</i></b></span>
             <!-- <p><b>Type: </b>{{ project.category }}</p>
             <p><b>Country: </b>{{ project.country }}</p>
             <p><b>Cost: </b>{{ project.cost }}</p>
