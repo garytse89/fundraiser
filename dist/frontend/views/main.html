@@ -39,7 +39,7 @@
               <span ng-show="project.funded" class="label label-sm label-danger">Funded</span>
               <span ng-show="!project.funded" class="label label-sm label-success">Available</span>
             </p><p>
-            </p><p><span ng-show="project.repeated"><i><b>*{{ project.countRemaining }} ${{ project.cost }} donations are needed to complete this project</b></i></span>
+            </p><p><span ng-show="project.repeated && !project.funded"><i><b>*{{ project.countRemaining }} ${{ project.cost }} donations are needed to complete this project</b></i></span>
             <!-- <p><b>Type: </b>{{ project.category }}</p>
             <p><b>Country: </b>{{ project.country }}</p>
             <p><b>Cost: </b>{{ project.cost }}</p>
