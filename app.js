@@ -6,7 +6,7 @@ var http = require('http'),
     path = require('path'),
 	colors = require('colors'),
   	connect = require('connect'),
-  	frontEndDir = 'dist/app/';
+  	frontEndDir = process.env.NODE_ENV == 'production' ? 'dist/frontend' : 'dist/app/';
 
  if (process.env.NODE_ENV !== 'production') {
 	process.env.REDIS_HOSTNAME = 'localhost'
