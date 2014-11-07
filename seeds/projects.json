@@ -6,7 +6,7 @@
 		"cost" : 595,
 		"short_description" : "Reintegrate a child rescued from sexual exploitation with his or her family",
 		"description" : "Reintegrate a child rescued from sexual exploitation with his or her family ",
-		"limit" : 1	
+		"limit" : 1
 	},
 	{
 		"name" : "Project 2",
@@ -24,7 +24,8 @@
 		"cost" : 3850,
 		"short_description" : "Provide a rescue operation for children from rogue orphanages",
 		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
-		"limit" : 4
+		"limit" : 4,
+		"repeated" : true
 	},
 	{
 		"name" : "Project 4",
@@ -87,7 +88,8 @@
 		"cost" : 1300,
 		"short_description" : "Support education for a child rescued from bonded labor",
 		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
-		"limit" : 50
+		"limit" : 50,
+		"repeated" : true
 	},
 	{
 		"name" : "Project 11",
@@ -132,7 +134,8 @@
 		"cost" : 8250,
 		"short_description" : "Provide food, clothing, & education for one month, for a child who is unable to be reintegrated",
 		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
-		"limit" : 23
+		"limit" : 23,
+		"repeated" : true
 	},
 	{
 		"name" : "Project 16",
@@ -186,7 +189,8 @@
 		"cost" : 6800,
 		"short_description" : "Provide medical care, including HIV support, for one girl rescued from sex trade",
 		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
-		"limit" : 4
+		"limit" : 4,
+		"repeated" : true
 	},
 	{
 		"name" : "Project 22",
@@ -213,7 +217,8 @@
 		"cost" : 13000,
 		"short_description" : "Support training for government & NGO officials on best practices to handle victims",
 		"description" : "A tool to quickly populate your mongo db from a set of .json files. The concept is very similar to Ruby on Rails idea of seeding a database. This allows a new developer to pull down the source code for a project (which contains .json files to populate their mongodb with) and run a command and bingo!! database populated and ready to rock.",
-		"limit" : 4
+		"limit" : 4,
+		"repeated" : true
 	},
 	{
 		"name" : "Project 25",
