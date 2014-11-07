@@ -5,7 +5,13 @@ angular.module('distApp')
 
   	$scope.category = $routeParams.category
 
-   	$scope.projects = API.projects({ category: $scope.category })
+    API.projects({ category: $scope.category }).$promise.then(function(projects) {
+      $scope.projects = projects
+      angular.forEach(projects, function(project) {
+        if (project.limit <= 0 ) project.funded = true
+      })
+    })
+
    	$scope.current_category = $scope.category
    	$scope.project_count = {}
 
@@ -19,7 +25,12 @@ angular.module('distApp')
    	})
 
    	$scope.switchCategory = function(category) {
-   		$scope.projects = API.projects({ category: category })
+   		API.projects({ category: category }).$promise.then(function(projects) {
+        $scope.projects = projects
+        angular.forEach(projects, function(project) {
+          if (project.limit <= 0 ) project.funded = true
+        })
+      })
    		$scope.current_category = category
    	}
 
@@ -31,7 +42,7 @@ angular.module('distApp')
 		    	}
 		    	return project
 		    })
-		})
+		  })
 	  })
 
 }]);
