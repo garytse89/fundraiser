@@ -1,6 +1,22 @@
 <div class="header" style="padding-left:20px;padding-right:20px">
-  <a ng-href="/"><h3 class="text-muted">{{ category }}</h3></a>      
+  <a ng-href="/"><h3 class="text-muted">{{ current_category }}</h3></a>   
+
+  <ul class="nav nav-tabs" role="tablist">
+    <!-- <li style="cursor:pointer" 
+    ng-class="{ 'active': current_category == '' }" 
+    ng-click="switchCategory()">
+      <a>All <span class="pull-right badge">{{ project_count.all.count }}</span></a>
+    </li> -->
+        
+    <li style="cursor:pointer" 
+    ng-class="{ 'active': current_category == category.name }" 
+    ng-repeat="category in categories" 
+    ng-click="switchCategory(category.name)">
+      <a>{{ category.name }} <span class="pull-right badge">{{ project_count[category.name].count }}</span></a>
+    </li>
+  </ul>   
 </div>
+
 
 <div class="row">
     <!--div class="col-md-3">
