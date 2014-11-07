@@ -3,6 +3,7 @@ node_modules
 .sass-cache
 pid
 dist/app/bower_components
+dist/dist/bower_components
 mongo-run
 output.md
 *.ns
