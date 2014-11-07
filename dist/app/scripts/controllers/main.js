@@ -49,6 +49,8 @@ angular.module('distApp')
             API.project({ project_id: project._id }).$promise.then(function(p) {
               if (p.limit <= 0) {
   		    		  project.funded = true // if project had 1 donation count remaining
+              } else {
+                project.funded = false
               }
 
               console.log('remaining limits = ', p.limit)
