@@ -1,12 +1,12 @@
 module.exports = function(database_name) {
 
-	var mongoURI = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/';
+	var mongoURI = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/' + database_name;
 
 	var mongoose = require('mongoose'),
     fs = require('fs');
 
-    console.log('Connecting to ' + mongoURI + database_name)
-	db = mongoose.createConnection(mongoURI + database_name);
+    console.log('Connecting to ' + mongoURI)
+	db = mongoose.createConnection(mongoURI);
 
 	mongoose.set('debug', true)
 
@@ -28,7 +28,7 @@ module.exports = function(database_name) {
 		cost: { type: Number, required: true },
 		short_description: { type: String, required: true },
 		description: { type: String, required: true },
-		limit: { type: Number, required: true, default: 1 } // most projects will disappear after being funded (limit=1); others might be repeatable
+		limit: { type: Number, required: true, default: 1, min: 0 } // most projects will disappear after being funded (limit=1); others might be repeatable
 	}, { collection: 'projects' }).index({ name: 1 }, { unique: true, sparse: true })
 
 	var Donator = new Schema({
