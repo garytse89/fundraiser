@@ -49,8 +49,7 @@ module.exports = function(app) {
 		var query = {
 			category: req.param('category'),
 			cost: req.param('cost'),
-			country: req.param('country'),
-			limit: { $gt : 0 }
+			country: req.param('country')
 		}
 
 		_(query).map(function(value, key, to_clean) { // filter null keys
