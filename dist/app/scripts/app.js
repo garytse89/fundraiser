@@ -9,7 +9,11 @@ angular.module('distApp', [
   'btford.socket-io'
   ])
   .config(['$routeProvider', function ($routeProvider) {
-    $routeProvider      
+    $routeProvider
+      .when('/start', {
+        templateUrl: 'views/start.html',
+        controller: 'StartCtrl'
+      })
       .when('/projects', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
@@ -31,6 +35,6 @@ angular.module('distApp', [
         controller: 'ThankyouCtrl'
       })
       .otherwise({
-        redirectTo: '/projects'
+        redirectTo: '/start'
       });
   }]);
