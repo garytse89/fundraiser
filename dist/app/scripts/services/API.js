@@ -25,17 +25,19 @@ angular.module('distApp')
 				method: 'GET',
 				url: baseUrl + '/:project_id'
 			},
+			countProjects: {
+				method: 'GET',
+				params: {
+					category: '@category'
+				},
+				url: baseUrl + '/count'
+			},
 			fund: {
 				method: 'POST',
 				params: {
 					project_id: '@project_id'
 				},
 				url: baseUrl + '/:project_id/fund'
-			},
-			contacts: {
-				method: 'GET',
-				url: 'https://api.relateiq.com/v2/contacts?_start=0',
-				headers: {'Authorization': 'Basic NTQ1YWVjODZlNGIwMjExMWI4MWFhN2VjOnBESnUxQ0JGbkJQNGp3aFo4MW5LOHE0M2NhaQ=='}
 			}
 		})
 	}])

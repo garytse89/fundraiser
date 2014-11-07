@@ -7,12 +7,12 @@
       <li class="active">Pledge</li>
     </ol>
 
-    <div class="alert alert-warning" ng-show="alreadyFunded" role="alert">
-      <strong>Warning!</strong> This project has just been funded.
+    <div class="alert alert-danger" ng-show="alreadyFunded" role="alert">
+      <strong>Attention!</strong> This project has been funded.
     </div>
 
     <div class="alert alert-success" ng-show="showSuccessLabel" role="alert">
-      <strong>Thank You!</strong> Your pledge has been received.
+      <strong>Thank You!</strong> Your pledge has been received. <a href="#/">View more projects</a>
     </div>
     <div class="alert alert-danger" ng-show="showWarningLabel" role="alert">
       <strong>Warning!</strong> Your pledge failed to register. Please try again.

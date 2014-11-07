@@ -9,10 +9,10 @@
 
 		<h1><b>{{ project.name }}</b></h1>
 		<hr />
-		<div class="alert alert-warning" ng-show="alreadyFunded" role="alert">
-			<strong>Warning!</strong> This project has been funded.
+		<div class="alert alert-danger" ng-show="alreadyFunded" role="alert">
+			<strong>Attention!</strong> This project has been funded.
 		</div>
 		<p>{{ project.description }}</p>
-		<a class="btn btn-success" ng-disabled="alreadyFunded" ng-href="/#/projects/{{ project._id }}/pledge">Fund Now</a>
+		<a class="btn btn-default" ng-disabled="alreadyFunded" ng-href="/#/projects/{{ project._id }}/pledge">Fund Now</a>
 	</div>
 </div>

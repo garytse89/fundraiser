@@ -16,6 +16,24 @@ module.exports = function(app) {
 	})
 
 	/**
+	 * count the projects in the category
+	 * if no category is supplied, count all projects
+	 */
+	app.get('/api/projects/count', function(req, res, next) {
+		var category = req.param('category')
+		var query = category ? {
+			limit: { $gt: 0 },
+			category: req.param('category')
+		} : { limit: { $gt: 0 } }
+
+		Models.Project.count(query).lean().exec().then(function(count) {
+			return res.send(200, { count: count })
+		}, function(err) {
+			return res.send(500, err)
+		})
+	})
+
+	/**
 	 * find all projects
 	 * optionally pass in filter parameters like category_id, cost, country, limit
 	 *
@@ -68,7 +86,7 @@ module.exports = function(app) {
 		// needs to be done this way so we dont expost our API key and secret
 		
 		var relateiq = new RelateIQ(process.env.RELATEIQ_API_KEY, process.env.RELATEIQ_SECRET)
-		
+
 		relateiq.getContacts(function(contacts) {
 			console.log(contacts)
 			return res.send(200, contacts)

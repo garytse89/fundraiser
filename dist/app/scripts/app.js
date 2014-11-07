@@ -30,11 +30,11 @@ angular.module('distApp', [
         templateUrl: 'views/thankyou.html',
         controller: 'ThankyouCtrl'
       })
-      .when('/', {
+      /*.when('/', {
         templateUrl: 'views/start.html',
         controller: 'StartCtrl'
-      })
+      })*/
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/projects'
       });
   }]);

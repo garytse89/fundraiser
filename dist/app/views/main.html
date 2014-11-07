@@ -1,6 +1,13 @@
 <div class="row">
-  <div class="col-md-12">
-    {{ project_category }}
+    <div class="col-md-3">
+      <h3 style="text-align:center">Categories</h3>
+      <hr />
+      <ul class="nav nav-pills nav-stacked" role="tablist">
+        <li style="cursor:pointer" ng-class="{ 'active': current_category == '' }" ng-click="switchCategory()"><a>All <span class="pull-right badge">{{ project_count.all.count }}</span></a></li>
+        <li style="cursor:pointer" ng-class="{ 'active': current_category == category.name }" ng-repeat="category in categories" ng-click="switchCategory(category.name)"><a>{{ category.name }} <span class="pull-right badge">{{ project_count[category.name].count }}</span></a></li>
+      </ul>
+    </div>
+    <div class="col-md-9">
       <div ng-repeat="project in projects" class="col-sm-6 col-md-4">
         <div class="thumbnail">
           <div class="caption">
@@ -10,15 +17,15 @@
             <p><b>Country: </b>{{ project.country }}</p>
             <p><b>Cost: </b>{{ project.cost }}</p>
             <p>{{ project.short_description }}</p>
-            <p><a class="btn btn-default" role="button" ng-href="#/projects/{{ project._id }}">Find Out More!</a>
-            </p>
+            <p><a class="btn btn-default" role="button" ng-href="#/projects/{{ project._id }}">Find Out More!</a></p>
           </div>
         </div>
       </div>
 
-  </div>
-</div>
-
-<div class="footer">
-  <p>From The Graduate team</p>
+      <div ng-show="projects.length == 0" class="panel panel-default">
+        <div style="text-align:center" class="panel-body">
+          No projects were found for this category
+        </div>
+      </div>
+    </div>
 </div>
