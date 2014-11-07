@@ -6,6 +6,7 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "bower": "latest",
     "colors": "~1.0.3",
     "connect": "~3.3.2",
     "express": "~3.5.1",
