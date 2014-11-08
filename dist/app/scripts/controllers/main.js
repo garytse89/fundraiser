@@ -1,9 +1,13 @@
 'use strict';
 
 angular.module('distApp')
-  .controller('MainCtrl', ['$scope', '$routeParams', 'API', 'Socket', '$modal', function ($scope, $routeParams, API, Socket, $modal) {
+  .controller('MainCtrl', ['$scope', '$routeParams', 'API', 'Socket', '$modal', 'RelateIQ', function ($scope, $routeParams, API, Socket, $modal, RelateIQ) {
 
   	$scope.category = $routeParams.category
+
+    RelateIQ.contacts().$promise.then(function(contacts) {
+      $scope.relateiq_contacts = contacts.object
+    })
 
     API.projects({ category: $scope.category }).$promise.then(function(projects) {
       $scope.projects = projects
@@ -47,6 +51,9 @@ angular.module('distApp')
         resolve: {
           project: function() {
             return project
+          },
+          relateiq_contacts: function() {
+            return $scope.relateiq_contacts
           }
         }
       })

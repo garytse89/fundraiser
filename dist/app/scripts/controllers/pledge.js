@@ -67,7 +67,7 @@ angular.module('distApp')
     $scope.phone_number = window.phone_numbers[i]
     $scope.address = window.addresses[i]
   };
-}]).controller('PledgeModalCtrl', ['$scope', '$routeParams', 'API', 'Socket', 'project', '$modalInstance', 'RelateIQ', function($scope, $routeParams, API, Socket, project, $modalInstance, RelateIQ) {
+}]).controller('PledgeModalCtrl', ['$scope', '$routeParams', 'API', 'Socket', 'project', 'relateiq_contacts', '$modalInstance', function($scope, $routeParams, API, Socket, project, relateiq_contacts, $modalInstance, RelateIQ) {
 
   // amount field is enabled by default
   $scope.amountDisabled = false;
@@ -105,9 +105,12 @@ angular.module('distApp')
     })
   }
 
+  // find contact in relateiq contact list
+  // have not tested this
   $scope.findContacts = function(querystring) {
-    RelateIQ.contacts({ contact_name: query_string }).$promise.then(function(contact_list) {
-      return contact_list
+    _(relateiq_contacts).find(function(contact) {
+      var regex = new RegExp(querystring, 'gi')
+      return contact.properties.name.value.match(regex) 
     })
   }
 
