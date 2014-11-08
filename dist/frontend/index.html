@@ -24,6 +24,10 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->  
+    <div class="header" ng-controller="header" style="padding-left:20px;padding-right:20px">
+      <h3><a href="/"><img src="../images/rtst.png"></a></h3>
+      <progressbar class="progress-striped active" max="donation_target" value="donation_amount" type="{{ donation_amount | toColorClass:donation_target }}"><i>{{ donation_amount | currency:'HKD' }} / {{ donation_target | currency:'HKD'}}</i></progressbar>  
+    </div>
 
     <div class="container" style="max-width:none" ng-view=""></div>
 
@@ -56,6 +60,6 @@
         <script src="bower_components/sass-bootstrap/js/popover.js"></script>
     -->
 
-        <script src="scripts/4cba14d8.scripts.js"></script>
+        <script src="scripts/ff5fba03.scripts.js"></script>
 </body>
 </html>

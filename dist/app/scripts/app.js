@@ -34,6 +34,10 @@ angular.module('distApp', [
         templateUrl: 'views/thankyou.html',
         controller: 'ThankyouCtrl'
       })
+      .when('/progress', {
+        templateUrl: 'views/progress.html',
+        controller: 'header'
+      })
       .otherwise({
         redirectTo: '/start'
       });

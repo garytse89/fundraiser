@@ -105,6 +105,7 @@ angular.module('distApp')
     })
   }
 
+<<<<<<< HEAD
   // find contact in relateiq contact list
   // have not tested this
   $scope.findContacts = function(querystring) {
@@ -112,6 +113,15 @@ angular.module('distApp')
       var regex = new RegExp(querystring, 'gi')
       return contact.properties.name.value.match(regex) 
     })
+=======
+  /* contact_list that is returned should take on the form of:
+  * [ { 'properties' : { 'name' : { 'value' : 'Interstellar' } } } ]
+  */
+  $scope.findContacts = function(query_string) {
+    API.contacts({ name: query_string }).$promise.then(function(contact_list) {
+        return contact_list // returns an array of Resources...
+      })
+>>>>>>> origin/master
   }
 
   Socket.on('project::funded', function(data) {

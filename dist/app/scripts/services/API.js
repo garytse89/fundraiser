@@ -42,6 +42,11 @@ angular.module('distApp')
 			countDonations: {
 				method: 'GET',
 				url: '/api/donations/countTotal'
+			},
+			contacts: {
+				method: 'GET',
+				url: '/api/contacts/:name',
+				isArray: true
 			}
 		})
 	}])

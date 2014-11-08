@@ -1,4 +1,5 @@
 var _ = require('underscore'),
+	q = require('q'),
 	RelateIQ = require('relateiq');
 
 module.exports = function(app) {
@@ -83,13 +84,31 @@ module.exports = function(app) {
 		// contact relate iq API and return contacts
 		// needs to be done this way so we dont expost our API key and secret
 		
-		var relateiq = new RelateIQ(process.env.RELATEIQ_API_KEY, process.env.RELATEIQ_SECRET)
+		//var relateiq = new RelateIQ(process.env.RELATEIQ_API_KEY, process.env.RELATEIQ_SECRET)
+		var relateiq = new RelateIQ("545aec86e4b02111b81aa7ec", "pDJu1CBFnBP4jwhZ81nK8q43cai")
 
-		relateiq.getContacts(function(contacts) {
-			console.log(contacts)
-			return res.send(200, contacts)
-		})
-		
+		var getContact = function(contact_id) {
+			var defer = q.defer()
+			console.log('Getting contact...')
+			relateiq.getContact(contact_id, function(err, contact) {
+				if(err) console.log(err)
+				defer.resolve(contact)					
+			})
+			return defer.promise
+		}
+
+		relateiq.getListItems("5412b6a5e4b050d28eb4aa4f", function(err, list_items) {
+			console.log("Got %d list items (relationships)", list_items.length)			
+			var promises = []
+			list_items.forEach(function(list_item) {				
+				promises.push(getContact(list_item.contactIds[0]))
+			})
+			q.all(promises).then(function(result) {
+				return res.send(200, result)
+			}, function(err) {
+				return res.send(200,err)
+			})
+		})		
 	})
 
 	/**
@@ -112,5 +131,21 @@ module.exports = function(app) {
 			return res.send(500, { error: err })
 		})
 	})
+
+	/**
+	 * get contacts based on parts of the name (autocomplete)
+	 * @param name {String}. the incomplete contact name
+	 */
+	app.get('/api/contacts/:name', function(req, res, next) {
+		//console.log('Frontend requested to search for: ', req.param('name'))
+		var reg_exp = new RegExp("^" + req.param('name'))
+		Models.Contact.find({ 'properties.name.value': reg_exp }).lean().exec().then(function(contact_list) {
+			//console.log('return this: ', contact_list)
+			return res.send(200, contact_list)
+		}, function(err) {
+			return res.send(500, err)
+		})
+	})
+
 
 }
