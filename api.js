@@ -114,7 +114,7 @@ module.exports = function(app) {
 	/**
 	 * aggregate the total donation amount
 	 */
-	app.get('/api/donatioxns/countTotal', function(req, res, next) {
+	app.get('/api/donations/countTotal', function(req, res, next) {
 		Models.Donation.aggregate(
 			{ $group: {
 				_id: null,
