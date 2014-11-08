@@ -4,53 +4,65 @@
 <div class="modal-body">
     {{ project.description }}
     <hr>
-    <div class="alert alert-danger" ng-show="alreadyFunded" role="alert">
-      <strong>Attention!</strong> This project has been funded.
+  
+  <div class="alert alert-danger" ng-show="already_funded" role="alert">
+    <strong>Attention!</strong> This project has been funded.
+  </div>
+
+  <div ng-show="!show_confirmation">
+    <div class="alert alert-warning" ng-show="already_donated_label" role="alert">
+      <strong>Warning!</strong> You have already donated to this project.
     </div>
 
-    <div class="alert alert-success" ng-show="showSuccessLabel" role="alert">
-      <strong>Thank You!</strong> Your pledge has been received. <a href="#/">View more projects</a>
+    <div class="form-group">
+      <label for="email">Pledge Amount (HKD)</label>
+      <input type="Number" ng-model="amount" ng-disabled="amountDisabled" class="form-control" required="" placeholder="{{ amount }}">
     </div>
-    <div class="alert alert-danger" ng-show="showWarningLabel" role="alert">
+     
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" typeahead="contact as contact.properties.name[0].value for contact in findContacts($viewValue)" class="form-control" typeahead-on-select="selectContact($item, $model, $label)" placeholder="Enter your name" ng-model="selected_contact.name" required="">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input ng-model="selected_contact.email" class="form-control" required="" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="phone_number">Phone Number</label>
+      <input ng-model="selected_contact.phone_number" class="form-control" required="" placeholder="Enter phone number">
+    </div>
+    <div class="form-group">
+      <label for="phone_number">Address (optional)</label>
+      <input ng-model="selected_contact.address" class="form-control" required="" placeholder="Enter phone number">
+    </div>
+  </div>
+
+  <div ng-if="show_confirmation">
+    <div class="alert alert-success" ng-show="show_success_label" role="alert">
+      <strong>Thank You!</strong> Your pledge has been received.
+    </div>
+    <div class="alert alert-danger" ng-show="show_warning_label" role="alert">
       <strong>Warning!</strong> Your pledge failed to register. Please try again.
     </div>
-
-  <div class="form-group">
-    <label for="email">Pledge Amount (HKD)</label>
-    <input type="Number" ng-model="amount" ng-disabled="amountDisabled" class="form-control" required="" placeholder="{{ amount }}">
-  </div>
-  <div class="form-group">
-    <label>Name</label>
-    <input type="text" tooltip-placement="right" tooltip="Type your name and select from the autocomplete" typeahead="contact as contact.properties.name.value for contact in findContacts($viewValue)" class="form-control" placeholder="Enter your name" ng-model="contact" required="">
-  </div>
-   
-  <div class="form-group">
-    <label for="firstName">First Name</label>
-    <input ng-model="first_name" class="form-control" id="firstName" required="" placeholder="Enter first name">
-  </div>
-  <div class="form-group">
-    <label for="lastName">Last Name</label>
-    <input ng-model="last_name" class="form-control" id="lastName" required="" placeholder="Enter last name">
-  </div>
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input ng-model="email" class="form-control" id="email" required="" placeholder="Enter email">
-  </div>
-  <div class="form-group">
-    <label for="phone_number">Phone Number</label>
-    <input ng-model="phone_number" class="form-control" id="phone_number" required="" placeholder="Enter phone number">
-  </div>
-
     <div style="color:#916f35" class="alert alert-warning" role="alert"><strong>Please review your project choice</strong>
         <hr>
         <p>I would like to sponsor a {{ project.category | lowercase }} project and pledge <strong>{{ amount | currency:'HKD' }}</strong> that will go towards <strong>{{ project.name | lowercase }}</strong>.<br><br>
 
           My contact details are:
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <p>Name: {{ selected_contact.name }}</p>
+              <p>E-mail: {{ selected_contact.email }}</p>
+              <p>Contact number: {{ selected_contact.phone_number }}</p>
+              <p>Address: {{ selected_contact.address || "-" }}</p> 
+            </div>
+          </div>
         </p>
     </div>
-
-
+  </div>
 </div>
+
 <div class="modal-footer">
-    <button type="submit" ng-disabled="alreadyFunded" class="btn btn-success" style="width:100%" ng-click="pledge()">Submit Pledge</button>
+    <button type="submit" ng-disabled="alreadyFunded" class="btn btn-success" ng-click="submitPledge()">Submit Pledge</button>
+    <button type="submit" ng-disabled="alreadyFunded" ng-if="show_confirmation" class="btn btn-default" ng-click="back()">Back</button>
 </div>
