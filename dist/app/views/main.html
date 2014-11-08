@@ -1,7 +1,7 @@
-<div class="header" style="padding-left:20px;padding-right:20px">
+<div class="header">
   <a ng-href="/"><h3 class="text-muted">{{ current_category }}</h3></a>   
 
-  <ul class="nav nav-tabs" role="tablist">
+  <ul class="nav nav-tabs nav-justified" role="tablist">
     <!-- <li style="cursor:pointer" 
     ng-class="{ 'active': current_category == '' }" 
     ng-click="switchCategory()">
@@ -39,7 +39,7 @@
             <p><b>Donation Cost: </b>{{ project.cost | currency:'HKD' }}</p>
             <p><b>Donators Needed:</b> {{ project.limit }}</p>
             <p>{{ project.short_description }}</p>
-            <p><a class="btn btn-default" role="button" ng-href="#/projects/{{ project._id }}">Find Out More!</a></p>
+            <p><a class="btn btn-default" role="button" ng-click="openProjectModal(project)">Find Out More!</a></p>
           </div>
         </div>
       </div>

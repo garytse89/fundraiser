@@ -38,6 +38,10 @@ angular.module('distApp')
 					project_id: '@project_id'
 				},
 				url: baseUrl + '/:project_id/fund'
+			},
+			countDonations: {
+				method: 'GET',
+				url: '/api/donations/countTotal'
 			}
 		})
 	}])

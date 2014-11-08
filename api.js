@@ -22,9 +22,8 @@ module.exports = function(app) {
 	app.get('/api/projects/count', function(req, res, next) {
 		var category = req.param('category')
 		var query = category ? {
-			limit: { $gt: 0 },
 			category: req.param('category')
-		} : { limit: { $gt: 0 } }
+		} : {}
 
 		Models.Project.count(query).lean().exec().then(function(count) {
 			return res.send(200, { count: count })
@@ -91,6 +90,27 @@ module.exports = function(app) {
 			return res.send(200, contacts)
 		})
 		
+	})
+
+	/**
+	 * aggregate the total donation amount
+	 */
+	app.get('/api/donations/countTotal', function(req, res, next) {
+		Models.Donation.aggregate(
+			{ $group: {
+				_id: null,
+				donation_total: { $sum: '$amount' }
+			} },
+			{ $project: {
+				_id: 0,
+				donation_total: '$donation_total'
+			} }
+		).exec().then(function(aggregate) {
+			return res.send(200, aggregate[0])
+		}, function(err) {
+			console.log(err.stack)
+			return res.send(500, { error: err })
+		})
 	})
 
 }

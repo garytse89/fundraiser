@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('distApp')
-  .controller('MainCtrl', ['$scope', '$routeParams', 'API', 'Socket', function ($scope, $routeParams, API, Socket) {
+  .controller('MainCtrl', ['$scope', '$routeParams', 'API', 'Socket', '$modal', function ($scope, $routeParams, API, Socket, $modal) {
 
   	$scope.category = $routeParams.category
 
@@ -9,7 +9,7 @@ angular.module('distApp')
       $scope.projects = projects
       angular.forEach(projects, function(project) {
         
-        project.funded = p.limit <= 0
+        project.funded = project.limit <= 0
 
       })
     })
@@ -33,12 +33,24 @@ angular.module('distApp')
         $scope.projects = projects
         angular.forEach(projects, function(project) {
           
-          project.funded = p.limit <= 0
+          project.funded = project.limit <= 0
 
         })
       })
    		$scope.current_category = category
    	}
+
+    $scope.openProjectModal = function(project) {
+      var modalInstance = $modal.open({
+        templateUrl: 'views/modal.html',
+        controller: 'PledgeModalCtrl',
+        resolve: {
+          project: function() {
+            return project
+          }
+        }
+      })
+    }
 
   	Socket.on('project::funded', function(data) {
   		$scope.$apply(function() {

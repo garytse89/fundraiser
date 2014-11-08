@@ -30,6 +30,10 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->  
+    <div class="header" ng-controller="header" style="padding-left:20px;padding-right:20px">
+      <h3><a href="/"><img src="../images/rtst.png"></a></h3>
+      <progressbar class="progress-striped active" max="donation_target" value="donation_amount" type="{{ donation_amount | toColorClass:donation_target }}"><i>{{ donation_amount | currency:'HKD' }} / {{ donation_target | currency:'HKD'}}</i></progressbar>  
+    </div>
 
     <div class="container" style="max-width:none" ng-view=""></div>
 
@@ -85,8 +89,10 @@
         <script src="scripts/controllers/pledge.js"></script>
         <script src="scripts/controllers/confirmation.js"></script>
         <script src="scripts/controllers/thankyou.js"></script>
+        <script src="scripts/controllers/header.js"></script>
 
         <script src="scripts/filters/numToWords.js"></script>
+        <script src="scripts/filters/toColorClass.js"></script>
         <script src="scripts/filters/toTitleCase.js"></script>
         <!-- endbuild -->
 </body>
