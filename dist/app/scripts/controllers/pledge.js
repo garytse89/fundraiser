@@ -30,7 +30,7 @@ angular.module('distApp')
 
       Socket.emit('project::fund', data, function(err) {
         if (err) {
-          $scope.show_error_label = true
+          $scope.show_warning_label = true
         } else {
           $scope.show_success_label = true
           // close modal

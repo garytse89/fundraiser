@@ -34,14 +34,14 @@ module.exports = function(database_name) {
 	}, { collection: 'projects' }).index({ name: 1 }, { unique: true, sparse: true })
 
 	var Donation = new Schema({
-		name: { type: String, required: true, unique: true },
+		name: { type: String, required: true },
 		email: { type: String, required: true },
 		phone_number: { type: String, required: true },
 		address: { type: String },
 		amount: { type: Number, required: true },
-		project_id: { type: Schema.Types.ObjectId, ref: 'Project' required: true },
-		created_at: { type: Date, default: Date.now },
-	}, { collection: 'donations' })
+		project_id: { type: Schema.Types.ObjectId, ref: 'Project', required: true },
+		created_at: { type: Date, default: Date.now }
+	}, { collection: 'donations' }).index({ project_id: 1, name: 1 }, { unique: true })
 
 	var Contact = new Schema({
 		properties: Schema.Types.Mixed

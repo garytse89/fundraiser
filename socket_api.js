@@ -13,16 +13,15 @@ module.exports = function(io) {
 		 */
 		socket.on('project::fund', function(data, fn) {
 			console.log('>> creating donation...')
+			console.log(data)
 			Models.Donation.create({
 				name: data.name,
-				email: data.email
+				email: data.email,
 				phone_number: data.phone_number,
 				address: data.address,
 				amount: data.amount,
 				project_id: data.project_id
-			}, { upsert: true }).lean().exec()
-			.then(function(donator) {
-
+			}).then(function(donator) {
 				// broadcast event to project channel (goes to everybody)
 				io.emit('project::funded', { project_id: data.project_id, amount: data.amount });
 				// broadcast event to main channel for progress bar (broadcast to everybody including current user)
@@ -35,7 +34,7 @@ module.exports = function(io) {
 							limit: -1 
 						} 
 					}).lean().exec()
-				
+
 			}).then(function() {
 				fn(null)
 			}, function(err) {
