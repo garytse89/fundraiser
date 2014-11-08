@@ -13,39 +13,33 @@ module.exports = function(io) {
 		 */
 		socket.on('project::fund', function(data, fn) {
 			console.log('>> creating donation...')
-			Models.Donator.findOneAndUpdate({
+			Models.Donation.create({
 				name: data.name,
-				email: data.email,
+				email: data.email
 				phone_number: data.phone_number,
-				address: data.address
-			}, {
-				$addToSet: {
-					projects: data.project_id
-				}
+				address: data.address,
+				amount: data.amount,
+				project_id: data.project_id
 			}, { upsert: true }).lean().exec()
 			.then(function(donator) {
 
-				// broadcast event to project channel (goes to everybody except the current user)
+				// broadcast event to project channel (goes to everybody)
 				io.emit('project::funded', { project_id: data.project_id, amount: data.amount });
 				// broadcast event to main channel for progress bar (broadcast to everybody including current user)
 				io.emit('pledge::new', { project_id: data.project_id, amount: data.amount })
 
-				return q.all([
-					Models.Donation.create({
-						donator: donator._id,
-						amount: data.amount
-					}),
-					Models.Project.findOneAndUpdate({ 
+				return Models.Project.findOneAndUpdate({ 
 						_id: data.project_id
 					}, { 
 						$inc: { 
 							limit: -1 
 						} 
 					}).lean().exec()
-				])
+				
 			}).then(function() {
 				fn(null)
 			}, function(err) {
+				console.log(err.stack)
 				fn({ error: err })
 			})
 		})

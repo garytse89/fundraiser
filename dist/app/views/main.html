@@ -33,7 +33,7 @@
         <div class="thumbnail">
           <div class="caption">
             <h3><b>{{ project.name }}</b></h3>
-            <p><b>Status: </b><span ng-show="project.funded" class="label label-sm label-danger">Funded</span><span ng-show="!project.funded" class="label label-sm label-success">Available</span><p>
+            <p><b>Status: </b><span ng-show="project.limit == 0" class="label label-sm label-danger">Funded</span><span ng-show="project.limit != 0" class="label label-sm label-success">Available</span><p>
             <p><b>Cause: </b>{{ project.cause }}</p>
             <p><b>Country: </b>{{ project.country }}</p>
             <p><b>Donation Cost: </b>{{ project.cost | currency:'HKD' }}</p>

@@ -11,11 +11,11 @@ angular.module('distApp')
     	//console.log(number)
     	// if number is between 0 and 40, show 'danger',
     	if (number <= 40) {
-    		return 'danger'
+    	 return 'danger'
     	} else if(number <= 60) {
-			return 'warning'
-		} if(number > 60) {
-    		return 'success'
+			 return 'warning'
+		  } if(number > 60) {
+    	 return 'success'
     	}
     }
   })

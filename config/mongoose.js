@@ -33,25 +33,21 @@ module.exports = function(database_name) {
 		repeated: { type: Boolean }
 	}, { collection: 'projects' }).index({ name: 1 }, { unique: true, sparse: true })
 
-	var Donator = new Schema({
+	var Donation = new Schema({
 		name: { type: String, required: true, unique: true },
 		email: { type: String, required: true },
 		phone_number: { type: String, required: true },
 		address: { type: String },
-		projects: [{ type: Schema.Types.ObjectId, ref: 'Project' }]
-	}, { collection: 'donators' })
-
-	var Donation = new Schema({
-		donator: { type: Schema.Types.ObjectId, ref: 'Donator', required: true },
+		amount: { type: Number, required: true },
+		project_id: { type: Schema.Types.ObjectId, ref: 'Project' required: true },
 		created_at: { type: Date, default: Date.now },
-		amount: { type: Number, required: true }
-	}, { collection: 'donations'})
+	}, { collection: 'donations' })
 
 	var Contact = new Schema({
+		properties: Schema.Types.Mixed
 	}, { collection: 'contacts'})
 
 	return {
-		Donator: db.model('Donator', Donator),
 		Project: db.model('Project', Project),
 		Donation: db.model('Donation', Donation),
 		Category: db.model('Category', Category),

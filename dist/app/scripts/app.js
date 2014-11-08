@@ -4,6 +4,7 @@ angular.module('distApp', [
   'ngRoute',
   'ngResource',
   'ngSanitize',
+  'ngAnimate',
   'ui.bootstrap',
   'ui.bootstrap.typeahead',
   'btford.socket-io'

@@ -1,0 +1,9 @@
+.ng-enter {
+    -webkit-transition: 0.350s linear all; /* Chrome */
+    transition: 0.350s linear all;
+    opacity: 0;
+}
+ 
+.ng-enter-active {
+    opacity: 1;
+}

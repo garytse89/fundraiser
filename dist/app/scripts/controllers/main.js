@@ -60,14 +60,12 @@ angular.module('distApp')
     }
 
   	Socket.on('project::funded', function(data) {
+      console.log(data)
   		$scope.$apply(function() {
 		    _($scope.projects).map(function(project) {
 		    	if (project._id == data.project_id) {
-            API.project({ project_id: project._id }).$promise.then(function(p) {
-              
-              project.funded = p.limit == 0
-              if (project.limit <= -1) project.unlimited = true
-            })
+            console.log(project)
+            project.limit -= 1
 		    	}
 		    	return project
 		    })

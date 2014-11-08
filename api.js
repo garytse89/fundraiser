@@ -80,19 +80,22 @@ module.exports = function(app) {
 		})
 	})
 
-	app.get('/api/relateIQContacts', function(req, res, next) {
+	app.get('/api/seedRelateIQContacts', function(req, res, next) {
 		// contact relate iq API and return contacts
 		// needs to be done this way so we dont expost our API key and secret
 		
 		//var relateiq = new RelateIQ(process.env.RELATEIQ_API_KEY, process.env.RELATEIQ_SECRET)
 		var relateiq = new RelateIQ("545aec86e4b02111b81aa7ec", "pDJu1CBFnBP4jwhZ81nK8q43cai")
 
-		var getContact = function(contact_id) {
+		var addContact = function(contact_id) {
 			var defer = q.defer()
-			console.log('Getting contact...')
 			relateiq.getContact(contact_id, function(err, contact) {
 				if(err) console.log(err)
-				defer.resolve(contact)					
+
+				Models.Contact.create(contact).then(function(cont) {
+					console.log(cont)
+					defer.resolve(cont)
+				})					
 			})
 			return defer.promise
 		}
@@ -101,8 +104,9 @@ module.exports = function(app) {
 			console.log("Got %d list items (relationships)", list_items.length)			
 			var promises = []
 			list_items.forEach(function(list_item) {				
-				promises.push(getContact(list_item.contactIds[0]))
+				promises.push(addContact(list_item.contactIds[0]))
 			})
+
 			q.all(promises).then(function(result) {
 				return res.send(200, result)
 			}, function(err) {
@@ -136,11 +140,11 @@ module.exports = function(app) {
 	 * get contacts based on parts of the name (autocomplete)
 	 * @param name {String}. the incomplete contact name
 	 */
-	app.get('/api/contacts/:name', function(req, res, next) {
+	app.get('/api/contacts', function(req, res, next) {
+		var name = req.param('name')
 		//console.log('Frontend requested to search for: ', req.param('name'))
-		var reg_exp = new RegExp("^" + req.param('name'))
-		Models.Contact.find({ 'properties.name.value': reg_exp }).lean().exec().then(function(contact_list) {
-			//console.log('return this: ', contact_list)
+		Models.Contact.find({ 'properties.name.value': { $regex: "^" + name, $options: 'ix' } }).limit(10).lean().exec()
+		.then(function(contact_list) {
 			return res.send(200, contact_list)
 		}, function(err) {
 			return res.send(500, err)
