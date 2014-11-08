@@ -1,4 +1,5 @@
 var _ = require('underscore'),
+	q = require('q'),
 	RelateIQ = require('relateiq');
 
 module.exports = function(app) {
@@ -83,19 +84,37 @@ module.exports = function(app) {
 		// contact relate iq API and return contacts
 		// needs to be done this way so we dont expost our API key and secret
 		
-		var relateiq = new RelateIQ(process.env.RELATEIQ_API_KEY, process.env.RELATEIQ_SECRET)
+		//var relateiq = new RelateIQ(process.env.RELATEIQ_API_KEY, process.env.RELATEIQ_SECRET)
+		var relateiq = new RelateIQ("545aec86e4b02111b81aa7ec", "pDJu1CBFnBP4jwhZ81nK8q43cai")
 
-		relateiq.getContacts(function(contacts) {
-			console.log(contacts)
-			return res.send(200, contacts)
-		})
-		
+		var getContact = function(contact_id) {
+			var defer = q.defer()
+			console.log('Getting contact...')
+			relateiq.getContact(contact_id, function(err, contact) {
+				if(err) console.log(err)
+				defer.resolve(contact)					
+			})
+			return defer.promise
+		}
+
+		relateiq.getListItems("5412b6a5e4b050d28eb4aa4f", function(err, list_items) {
+			console.log("Got %d list items (relationships)", list_items.length)			
+			var promises = []
+			list_items.forEach(function(list_item) {				
+				promises.push(getContact(list_item.contactIds[0]))
+			})
+			q.all(promises).then(function(result) {
+				return res.send(200, result)
+			}, function(err) {
+				return res.send(200,err)
+			})
+		})		
 	})
 
 	/**
 	 * aggregate the total donation amount
 	 */
-	app.get('/api/donations/countTotal', function(req, res, next) {
+	app.get('/api/donatioxns/countTotal', function(req, res, next) {
 		Models.Donation.aggregate(
 			{ $group: {
 				_id: null,
