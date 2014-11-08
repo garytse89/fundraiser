@@ -31,7 +31,7 @@
           <div class="caption">
             <h3><b>{{ project.name }}</b></h3>
             <p><b>Status: </b><span ng-show="project.funded" class="label label-sm label-danger">Funded</span><span ng-show="!project.funded" class="label label-sm label-success">Available</span></p><p>
-            </p><p><b>Type: </b>{{ project.category }}</p>
+            </p><p><b>Cause: </b>{{ project.cause }}</p>
             <p><b>Country: </b>{{ project.country }}</p>
             <p><b>Donation Cost: </b>{{ project.cost | currency:'HKD' }}</p>
             <p><b>Donators Needed:</b> {{ project.limit }}</p>
