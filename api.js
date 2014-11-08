@@ -132,4 +132,20 @@ module.exports = function(app) {
 		})
 	})
 
+	/**
+	 * get contacts based on parts of the name (autocomplete)
+	 * @param name {String}. the incomplete contact name
+	 */
+	app.get('/api/contacts/:name', function(req, res, next) {
+		//console.log('Frontend requested to search for: ', req.param('name'))
+		var reg_exp = new RegExp("^" + req.param('name'))
+		Models.Contact.find({ 'properties.name.value': reg_exp }).lean().exec().then(function(contact_list) {
+			//console.log('return this: ', contact_list)
+			return res.send(200, contact_list)
+		}, function(err) {
+			return res.send(500, err)
+		})
+	})
+
+
 }

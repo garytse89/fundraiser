@@ -46,11 +46,15 @@ module.exports = function(database_name) {
 		amount: { type: Number, required: true }
 	}, { collection: 'donations'})
 
+	var Contact = new Schema({
+	}, { collection: 'contacts'})
+
 	return {
 		Donator: db.model('Donator', Donator),
 		Project: db.model('Project', Project),
 		Donation: db.model('Donation', Donation),
-		Category: db.model('Category', Category)
+		Category: db.model('Category', Category),
+		Contact: db.model('Contact', Contact)
 	}
 
 }
