@@ -3,7 +3,7 @@
 </div>
 <div class="modal-body">
     {{ project.description }}
-    <hr />
+    <hr>
     <div class="alert alert-danger" ng-show="alreadyFunded" role="alert">
       <strong>Attention!</strong> This project has been funded.
     </div>
@@ -17,33 +17,33 @@
 
   <div class="form-group">
     <label for="email">Pledge Amount (HKD)</label>
-    <input type="Number" ng-model="amount" ng-disabled="amountDisabled" class="form-control" required placeholder="{{ amount }}">
+    <input type="Number" ng-model="amount" ng-disabled="amountDisabled" class="form-control" required="" placeholder="{{ amount }}">
   </div>
   <div class="form-group">
     <label>Name</label>
-    <input type="text" tooltip-placement="right" tooltip="Type your name and select from the autocomplete" typeahead="contact as contact.properties.name.value for contact in findContacts($viewValue)" class="form-control" placeholder="Enter your name" ng-model="contact" required>
+    <input type="text" tooltip-placement="right" tooltip="Type your name and select from the autocomplete" typeahead="contact as contact.properties.name.value for contact in findContacts($viewValue)" class="form-control" placeholder="Enter your name" ng-model="contact" required="">
   </div>
    
   <div class="form-group">
     <label for="firstName">First Name</label>
-    <input ng-model="first_name" class="form-control" id="firstName" required placeholder="Enter first name">
+    <input ng-model="first_name" class="form-control" id="firstName" required="" placeholder="Enter first name">
   </div>
   <div class="form-group">
     <label for="lastName">Last Name</label>
-    <input ng-model="last_name" class="form-control" id="lastName" required placeholder="Enter last name">
+    <input ng-model="last_name" class="form-control" id="lastName" required="" placeholder="Enter last name">
   </div>
   <div class="form-group">
     <label for="email">Email</label>
-    <input ng-model="email" class="form-control" id="email" required placeholder="Enter email">
+    <input ng-model="email" class="form-control" id="email" required="" placeholder="Enter email">
   </div>
   <div class="form-group">
     <label for="phone_number">Phone Number</label>
-    <input ng-model="phone_number" class="form-control" id="phone_number" required placeholder="Enter phone number">
+    <input ng-model="phone_number" class="form-control" id="phone_number" required="" placeholder="Enter phone number">
   </div>
 
     <div style="color:#916f35" class="alert alert-warning" role="alert"><strong>Please review your project choice</strong>
-        <hr />
-        <p>I would like to sponsor a {{ project.category | lowercase }} project and pledge <strong>{{ amount | currency:'HKD' }}</strong> that will go towards <strong>{{ project.name | lowercase }}</strong>.<br /><br />
+        <hr>
+        <p>I would like to sponsor a {{ project.category | lowercase }} project and pledge <strong>{{ amount | currency:'HKD' }}</strong> that will go towards <strong>{{ project.name | lowercase }}</strong>.<br><br>
 
           My contact details are:
         </p>
