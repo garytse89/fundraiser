@@ -9,8 +9,8 @@ angular.module('distApp')
       $scope.projects = projects
       angular.forEach(projects, function(project) {
         
-        project.funded = project.limit <= 0
-
+        project.funded = project.limit == 0
+        if (project.limit <= -1) project.unlimited = true
       })
     })
 
@@ -33,8 +33,8 @@ angular.module('distApp')
         $scope.projects = projects
         angular.forEach(projects, function(project) {
           
-          project.funded = project.limit <= 0
-
+          project.funded = project.limit == 0
+          if (project.limit <= -1) project.unlimited = true
         })
       })
    		$scope.current_category = category
@@ -58,8 +58,8 @@ angular.module('distApp')
 		    	if (project._id == data.project_id) {
             API.project({ project_id: project._id }).$promise.then(function(p) {
               
-              project.funded = p.limit <= 0
-
+              project.funded = p.limit == 0
+              if (project.limit <= -1) project.unlimited = true
             })
 		    	}
 		    	return project
