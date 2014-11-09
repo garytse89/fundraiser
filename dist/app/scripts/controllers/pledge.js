@@ -19,6 +19,10 @@ angular.module('distApp')
     $scope.already_funded = true
   }
 
+  $scope.close = function() {
+    $modalInstance.close()
+  }
+
   $scope.submitPledge = function() {
 
     if ($scope.show_confirmation) {
