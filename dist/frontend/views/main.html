@@ -34,7 +34,7 @@
             </p><p><b>Cause: </b>{{ project.cause }}</p>
             <p><b>Country: </b>{{ project.country }}</p>
             <p><b>Donation Cost: </b>{{ project.cost | currency:'HKD' }}</p>
-            <p><b>Donations Needed:</b> <span ng-show="!project.unlimited">{{ project.limit }}</span><span ng-show="project.unlimited">Unlimited</span></p>
+            <p><b>Donations Needed:</b> <span ng-show="!project.limit = -1">{{ project.limit }}</span><span ng-show="project.limit == -1">Unlimited</span></p>
             <p>{{ project.short_description }}</p>
             <p><a class="btn btn-default" role="button" ng-click="openProjectModal(project)">Find Out More!</a></p>
           </div>
