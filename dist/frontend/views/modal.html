@@ -16,24 +16,24 @@
 
     <div class="form-group">
       <label for="email">Pledge Amount (HKD)</label>
-      <input type="Number" ng-model="amount" ng-disabled="amountDisabled" class="form-control" required="" placeholder="{{ amount }}">
+      <input type="Number" ng-model="amount" ng-disabled="already_funded || amount_disabled" class="form-control" required="" placeholder="{{ amount }}">
     </div>
      
     <div class="form-group">
       <label>Name</label>
-      <input type="text" typeahead="contact as contact.properties.name[0].value for contact in findContacts($viewValue)" class="form-control" typeahead-on-select="selectContact($item, $model, $label)" placeholder="Enter your name" ng-model="selected_contact.name" required="">
+      <input ng-disabled="already_funded" type="text" typeahead="contact as contact.properties.name[0].value for contact in findContacts($viewValue)" class="form-control" typeahead-on-select="selectContact($item, $model, $label)" placeholder="Enter your name" ng-model="selected_contact.name" required="">
     </div>
     <div class="form-group">
       <label for="email">Email</label>
-      <input ng-model="selected_contact.email" class="form-control" required="" placeholder="Enter email">
+      <input ng-disabled="already_funded" ng-model="selected_contact.email" class="form-control" required="" placeholder="Enter email">
     </div>
     <div class="form-group">
       <label for="phone_number">Phone Number</label>
-      <input ng-model="selected_contact.phone_number" class="form-control" required="" placeholder="Enter phone number">
+      <input ng-disabled="already_funded" ng-model="selected_contact.phone_number" class="form-control" required="" placeholder="Enter phone number">
     </div>
     <div class="form-group">
       <label for="phone_number">Address (optional)</label>
-      <input ng-model="selected_contact.address" class="form-control" required="" placeholder="Enter phone number">
+      <input ng-disabled="already_funded" ng-model="selected_contact.address" class="form-control" required="" placeholder="Enter phone number">
     </div>
   </div>
 
@@ -63,6 +63,6 @@
 </div>
 
 <div class="modal-footer">
-    <button type="submit" ng-disabled="alreadyFunded" class="btn btn-success" ng-click="submitPledge()">Submit Pledge</button>
-    <button type="submit" ng-disabled="alreadyFunded" ng-if="show_confirmation" class="btn btn-default" ng-click="back()">Back</button>
+    <button type="submit" ng-disabled="already_funded" class="btn btn-success" ng-click="submitPledge()">Submit Pledge</button>
+    <button type="submit" ng-disabled="already_funded" ng-if="show_confirmation" class="btn btn-default" ng-click="back()">Back</button>
 </div>

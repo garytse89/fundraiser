@@ -1,0 +1,7 @@
+.progress {
+    position: relative;
+}
+
+.progress span {
+    line-height:200px !important;
+ }

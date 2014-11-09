@@ -1,13 +1,9 @@
 'use strict';
 
 angular.module('distApp')
-  .controller('MainCtrl', ['$scope', '$routeParams', 'API', 'Socket', '$modal', 'RelateIQ', function ($scope, $routeParams, API, Socket, $modal, RelateIQ) {
+  .controller('MainCtrl', ['$scope', '$routeParams', 'API', 'Socket', '$modal', '$location', function ($scope, $routeParams, API, Socket, $modal, $location) {
 
   	$scope.category = $routeParams.category
-
-    RelateIQ.contacts().$promise.then(function(contacts) {
-      $scope.relateiq_contacts = contacts.object
-    })
 
     API.projects({ category: $scope.category }).$promise.then(function(projects) {
       $scope.projects = projects
@@ -34,14 +30,9 @@ angular.module('distApp')
 
    	$scope.switchCategory = function(category) {
    		API.projects({ category: category }).$promise.then(function(projects) {
+        $scope.current_category = category
         $scope.projects = projects
-        angular.forEach(projects, function(project) {
-          
-          project.funded = project.limit == 0
-          if (project.limit <= -1) project.unlimited = true
-        })
       })
-   		$scope.current_category = category
    	}
 
     $scope.openProjectModal = function(project) {
@@ -51,9 +42,6 @@ angular.module('distApp')
         resolve: {
           project: function() {
             return project
-          },
-          relateiq_contacts: function() {
-            return $scope.relateiq_contacts
           }
         }
       })

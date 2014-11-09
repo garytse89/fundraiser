@@ -43,6 +43,10 @@ angular.module('distApp')
 				method: 'GET',
 				url: '/api/donations/countTotal'
 			},
+			donationTarget: {
+				method: 'GET',
+				url: '/api/donations/target'
+			},
 			checkProjectDonator: {
 				method: 'GET',
 				url: '/api/checkProjectDonator'

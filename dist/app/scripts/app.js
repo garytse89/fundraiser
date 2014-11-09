@@ -11,7 +11,7 @@ angular.module('distApp', [
   ])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
-      .when('/start', {
+      .when('/', {
         templateUrl: 'views/start.html',
         controller: 'StartCtrl'
       })
@@ -37,9 +37,9 @@ angular.module('distApp', [
       })
       .when('/progress', {
         templateUrl: 'views/progress.html',
-        controller: 'header'
+        controller: 'progress'
       })
       .otherwise({
-        redirectTo: '/start'
+        redirectTo: '/'
       });
   }]);

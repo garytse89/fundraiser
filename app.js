@@ -8,7 +8,9 @@ var http = require('http'),
   	connect = require('connect'),
   	frontEndDir = process.env.NODE_ENV == 'production' ? 'dist/frontend' : 'dist/app/';
 
- if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
+  process.env.DONATION_TARGET = 500000
+
 	process.env.REDIS_HOSTNAME = 'localhost'
 	process.env.REDIS_PORT = 6379
 	process.env.REDIS_AUTH = ''

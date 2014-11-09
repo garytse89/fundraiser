@@ -8,7 +8,7 @@ angular.module('distApp')
     	//console.log(n)
     	//console.log(max)
     	var number = max ? Math.floor(Math.abs(n/max)*100) : Math.abs(n);
-    	//console.log(number)
+    	console.log(number)
     	// if number is between 0 and 40, show 'danger',
     	if (number <= 40) {
     	 return 'danger'

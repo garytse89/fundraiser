@@ -136,6 +136,10 @@ module.exports = function(app) {
 		})
 	})
 
+	app.get('/api/donations/target', function(req, res, next) {
+		return res.send(200, { target: process.env.DONATION_TARGET })
+	})
+
 	/**
 	 * get contacts based on parts of the name (autocomplete)
 	 * @param name {String}. the incomplete contact name

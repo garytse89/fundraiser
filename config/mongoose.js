@@ -24,6 +24,7 @@ module.exports = function(database_name) {
 	var Project = new Schema({
 		name: { type: String },
 		cause: { type: String, required: true },
+		special: { type: Boolean },
 		category: { type: String, required: true },
 		country: { type: String, required: true },
 		cost: { type: Number, required: true },
