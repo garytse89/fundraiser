@@ -32,12 +32,12 @@
       <div ng-repeat="project in projects" class="col-sm-6 col-md-4">
         <div class="thumbnail">
           <div class="caption">
-            <h3><b>{{ project.name }} <i ng-show="project.special" class="glyphicon glyphicon-star"></i></b></h3>
+            <h3><b>{{ project.name }}</b></h3>
             <p><b>Status: </b><span ng-show="project.limit == 0" class="label label-sm label-danger">Funded</span><span ng-show="project.limit != 0" class="label label-sm label-success">Available</span><p>
             <p><b>Cause: </b>{{ project.cause }}</p>
             <p><b>Country: </b>{{ project.country }}</p>
             <p><b>Donation Cost: </b>{{ project.cost | currency:'HKD' }}</p>
-            <p><b>Donations Needed:</b> <span ng-show="!project.limit = -1">{{ project.limit }}</span><span ng-show="project.limit == -1">Unlimited</span></p>
+            <p><b>Donations Needed:</b> <span ng-show="project.limit >= 0">{{ project.limit }}</span><span class="label label-warning" ng-show="project.limit < 0">Unlimited</span></p>
             <p>{{ project.short_description }}</p>
             <p><a class="btn btn-default" role="button" ng-click="openProjectModal(project)">Find Out More!</a></p>
           </div>
