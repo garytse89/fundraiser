@@ -48,7 +48,7 @@
     </div-->
 
     <div class="col-md-12">
-      <div ng-repeat="project in projects" class="col-sm-6 col-md-4">
+      <div ng-repeat="project in projects | orderBy:project.name" class="col-sm-6 col-md-4">
         <div class="thumbnail">
           <div class="caption">
             <h3><b>{{ project.name.toUpperCase() }}</b></h3>
