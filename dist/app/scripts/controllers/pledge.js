@@ -14,6 +14,7 @@ angular.module('distApp')
   if (project.cost < 40000) {
     $scope.amount_disabled = true
     $scope.high_cost_project = false
+    $scope.cost_increment = 9999999
   } else {
     $scope.high_cost_project = true
     $scope.cost_increment = project.increment
@@ -50,7 +51,7 @@ angular.module('distApp')
     }
 
     var data = _($scope.selected_contact).extend({
-      amount: $scope.amount, 
+      amount: Math.min($scope.amount, $scope.cost_increment), 
       project_id: project._id,
       project_category: project.category 
     })

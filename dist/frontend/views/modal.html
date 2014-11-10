@@ -46,8 +46,11 @@
     <div style="color:#916f35" class="alert alert-warning" role="alert"><strong>Please review your project choice</strong>
         <hr>
         <p>I would like to sponsor a {{ project.category | lowercase }} project and pledge <strong> 
-        <div ng-if="amount <= cost_increment">{{ amount | currency:'HKD' }}</div>
-        <div ng-if="amount > cost_increment">{{ cost_increment | currency:'HKD' }}</div>
+        <div ng-if="!high_cost_project">{{ amount | currency:'HKD' }}</div>
+        <div ng-if="high_cost_project">
+          <div ng-if="amount <= cost_increment">{{ amount | currency:'HKD' }}</div>
+          <div ng-if="amount > cost_increment">{{ cost_increment | currency:'HKD' }}</div>
+        </div>
         </strong>
          that will go towards the following project: <strong>{{ project.type | lowercase }}</strong>.<br><br>
 
