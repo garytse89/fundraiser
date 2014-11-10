@@ -36,9 +36,8 @@ angular.module('distApp')
         if (err) {
           $scope.show_warning_label = true
         } else {
-          $scope.show_success_label = true
-          // close modal
-          $modalInstance.close()
+          $scope.show_confirmation = false
+          $scope.show_thankyou = true
         }
       })
     } else {
