@@ -11,3 +11,7 @@ thover:hover, thover:focus: {
        -moz-border-radius: 8px;
             border-radius: 8px;
     }
+
+.vmargin {
+	margin-bottom: 3em;
+}
