@@ -1,7 +1,6 @@
 [
     {
-        "name": "Project 1",
-        "cause": "Child sex trafficking",
+        "name": "Child Sex Trafficking 1",
         "category": "Rescue",
         "country": "Cambodia",
         "cost": 595,
@@ -10,8 +9,7 @@
         "limit": 1
     },
     {
-        "name": "Project 2",
-        "cause": "Child sex trafficking",
+        "name": "Child Sex Trafficking 2",
         "category": "Rescue",
         "country": "Cambodia",
         "cost": 1250,
@@ -20,8 +18,7 @@
         "limit": 1
     },
     {
-        "name": "Project 3",
-        "cause": "Orphan Business",
+        "name": "Orphan Business 1",
         "category": "Rescue",
         "country": "Cambodia",
         "cost": 3400,
@@ -31,8 +28,7 @@
         "repeated": true
     },
     {
-        "name": "Project 4",
-        "cause": "Child sex trafficking",
+        "name": "Child Sex Trafficking 4",
         "category": "Rescue",
         "country": "Cambodia",
         "cost": 3850,
@@ -41,8 +37,7 @@
         "limit": -1
     },
     {
-        "name": "Project 5",
-        "cause": "Child sex trafficking",
+        "name": "Child Sex Trafficking 5",
         "category": "Rescue",
         "country": "Vietnam",
         "cost": 25500,
@@ -51,8 +46,7 @@
         "limit": 1
     },
     {
-        "name": "Project 6",
-        "cause": "Exploitative Labour",
+        "name": "Exploitative Labor 9",
         "category": "Rescue",
         "country": "Vietnam",
         "cost": 27700,
@@ -61,8 +55,7 @@
         "limit": 1
     },
     {
-        "name": "Project 7",
-        "cause": "Child trafficking",
+        "name": "Child Sex Trafficking 6",
         "category": "Rescue",
         "country": "Cambodia",
         "cost": 48000,
@@ -71,8 +64,7 @@
         "limit": 1
     },
     {
-        "name": "Project 8",
-        "cause": "Child sex trafficking",
+        "name": "Child Sex Trafficking 7",
         "category": "Rehabilitation",
         "country": "Vietnam",
         "cost": 850,
@@ -81,8 +73,7 @@
         "limit": 1
     },
     {
-        "name": "Project 9",
-        "cause": "Exploitative Labour",
+        "name": "Exploitative Labor 10",
         "category": "Rehabilitation",
         "country": "Singapore",
         "cost": 850,
@@ -91,8 +82,7 @@
         "limit": 1
     },
     {
-        "name": "Project 10",
-        "cause": "Child Labor",
+        "name": "Child Labor 1",
         "category": "Rehabilitation",
         "country": "Vietnam",
         "cost": 1300,
@@ -102,8 +92,7 @@
         "repeated": true
     },
     {
-        "name": "Project 11",
-        "cause": "Child Sex Trafficking",
+        "name": "Child Sex Trafficking 8",
         "category": "Rehabilitation",
         "country": "Cambodia",
         "cost": 1980,
@@ -112,8 +101,7 @@
         "limit": 1
     },
     {
-        "name": "Project 12",
-        "cause": "Exploitative Labour",
+        "name": "Exploitative Labor 11",
         "category": "Rehabilitation",
         "country": "Singapore",
         "cost": 3200,
@@ -122,8 +110,7 @@
         "limit": -1
     },
     {
-        "name": "Project 13",
-        "cause": "Exploitative Labour",
+        "name": "Exploitative Labour 12",
         "category": "Rehabilitation",
         "country": "Vietnam",
         "cost": 4600,
@@ -132,8 +119,7 @@
         "limit": -1
     },
     {
-        "name": "Project 14",
-        "cause": "Child trafficking",
+        "name": "Child Trafficking 1",
         "category": "Rehabilitation",
         "country": "Nepal",
         "cost": 6100,
@@ -142,8 +128,7 @@
         "limit": 1
     },
     {
-        "name": "Project 15",
-        "cause": "Child Labour",
+        "name": "Child Labor 2",
         "category": "Rehabilitation",
         "country": "Nepal",
         "cost": 8250,
@@ -153,8 +138,7 @@
         "repeated": true
     },
     {
-        "name": "Project 16",
-        "cause": "Child trafficking",
+        "name": "Child Trafficking 2",
         "category": "Rehabilitation",
         "country": "Malaysia",
         "cost": 10500,
@@ -163,8 +147,7 @@
         "limit": 1
     },
     {
-        "name": "Project 17",
-        "cause": "Child Labour",
+        "name": "Child Labor 3",
         "category": "Rehabilitation",
         "country": "Nepal",
         "cost": 13500,
@@ -173,8 +156,7 @@
         "limit": 1
     },
     {
-        "name": "Project 18",
-        "cause": "Child Labour",
+        "name": "Child Labor 4",
         "category": "Rehabilitation",
         "country": "Nepal",
         "cost": 16400,
@@ -183,8 +165,7 @@
         "limit": 1
     },
     {
-        "name": "Project 19",
-        "cause": "Child Labour",
+        "name": "Child Labor 5",
         "category": "Rehabilitation",
         "country": "Nepal",
         "cost": 30250,
@@ -193,8 +174,7 @@
         "limit": 1
     },
     {
-        "name": "Project 20",
-        "cause": "Child sex trafficking",
+        "name": "Child Sex Trafficking 11",
         "category": "Rehabilitation",
         "country": "Vietnam",
         "cost": 5100,
@@ -203,8 +183,7 @@
         "limit": 1
     },
     {
-        "name": "Project 21",
-        "cause": "Child Trafficking",
+        "name": "Child Trafficking 3",
         "category": "Investment",
         "country": "Nepal",
         "cost": 6800,
@@ -214,8 +193,7 @@
         "repeated": true
     },
     {
-        "name": "Project 22",
-        "cause": "Child Trafficking",
+        "name": "Child Trafficking 4",
         "category": "Investment",
         "country": "Cambodia",
         "cost": 10200,
@@ -224,8 +202,7 @@
         "limit": 4
     },
     {
-        "name": "Project 23",
-        "cause": "Child Trafficking",
+        "name": "Child Trafficking 5",
         "category": "Investment",
         "country": "Malaysia",
         "cost": 13000,
@@ -234,8 +211,7 @@
         "limit": 1
     },
     {
-        "name": "Project 24",
-        "cause": "Child Trafficking",
+        "name": "Child Trafficking 6",
         "category": "Investment",
         "country": "Malaysia",
         "cost": 13000,
@@ -245,8 +221,7 @@
         "repeated": true
     },
     {
-        "name": "Project 25",
-        "cause": "Child Trafficking",
+        "name": "Child Trafficking 7",
         "category": "Investment",
         "country": "Nepal",
         "cost": 13250,
@@ -255,8 +230,7 @@
         "limit": 1
     },
     {
-        "name": "Project 26",
-        "cause": "Child Trafficking",
+        "name": "Child Trafficking 8",
         "category": "Investment",
         "country": "Nepal",
         "cost": 13600,
@@ -265,8 +239,7 @@
         "limit": 1
     },
     {
-        "name": "Project 27",
-        "cause": "Child Sex Trafficking",
+        "name": "Child Sex Trafficking 12",
         "category": "Investment",
         "country": "Cambodia",
         "cost": 15000,
@@ -275,8 +248,7 @@
         "limit": 1
     },
     {
-        "name": "Project 28",
-        "cause": "Child Trafficking",
+        "name": "Child Trafficking 9",
         "category": "Investment",
         "country": "Malaysia",
         "cost": 15800,
@@ -285,8 +257,7 @@
         "limit": 1
     },
     {
-        "name": "Project 29",
-        "cause": "Child Trafficking",
+        "name": "Child Trafficking 10",
         "category": "Investment",
         "country": "Vietnam",
         "cost": 21300,
@@ -295,8 +266,7 @@
         "limit": 1
     },
     {
-        "name": "Project 30",
-        "cause": "Child Sex Trafficking",
+        "name": "Child Sex Trafficking 13",
         "category": "Investment",
         "country": "Cambodia",
         "cost": 34000,
@@ -305,8 +275,7 @@
         "limit": 1
     },
     {
-        "name": "Project 31",
-        "cause": "Child Trafficking",
+        "name": "Child Trafficking 11",
         "category": "Investment",
         "country": "Vietnam",
         "cost": 51200,
@@ -315,8 +284,7 @@
         "limit": 1
     },
     {
-        "name": "Project 32",
-        "cause": "Child Trafficking",
+        "name": "Child Trafficking 12",
         "category": "Investment",
         "country": "Cambodia",
         "cost": 52500,
@@ -325,8 +293,7 @@
         "limit": 1
     },
     {
-        "name": "Project 33",
-        "cause": "Child Trafficking",
+        "name": "Child Trafficking 13",
         "category": "Investment",
         "country": "Nepal",
         "cost": 162200,
