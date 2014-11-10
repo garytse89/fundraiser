@@ -28,7 +28,7 @@
         "repeated": true
     },
     {
-        "name": "Child Sex Trafficking 4",
+        "name": "Child Sex Trafficking 3",
         "category": "Rescue",
         "country": "Cambodia",
         "cost": 3850,
@@ -37,7 +37,7 @@
         "limit": -1
     },
     {
-        "name": "Child Sex Trafficking 5",
+        "name": "Child Sex Trafficking 4",
         "category": "Rescue",
         "country": "Vietnam",
         "cost": 25500,
@@ -46,7 +46,7 @@
         "limit": 1
     },
     {
-        "name": "Exploitative Labor 9",
+        "name": "Exploitative Labor 1",
         "category": "Rescue",
         "country": "Vietnam",
         "cost": 27700,
@@ -55,7 +55,7 @@
         "limit": 1
     },
     {
-        "name": "Child Sex Trafficking 6",
+        "name": "Child Sex Trafficking 5",
         "category": "Rescue",
         "country": "Cambodia",
         "cost": 48000,
@@ -64,7 +64,7 @@
         "limit": 1
     },
     {
-        "name": "Child Sex Trafficking 7",
+        "name": "Child Sex Trafficking 6",
         "category": "Rehabilitation",
         "country": "Vietnam",
         "cost": 850,
@@ -73,7 +73,7 @@
         "limit": 1
     },
     {
-        "name": "Exploitative Labor 10",
+        "name": "Exploitative Labor 2",
         "category": "Rehabilitation",
         "country": "Singapore",
         "cost": 850,
@@ -92,7 +92,7 @@
         "repeated": true
     },
     {
-        "name": "Child Sex Trafficking 8",
+        "name": "Child Sex Trafficking 7",
         "category": "Rehabilitation",
         "country": "Cambodia",
         "cost": 1980,
@@ -101,7 +101,7 @@
         "limit": 1
     },
     {
-        "name": "Exploitative Labor 11",
+        "name": "Exploitative Labor 3",
         "category": "Rehabilitation",
         "country": "Singapore",
         "cost": 3200,
@@ -110,7 +110,7 @@
         "limit": -1
     },
     {
-        "name": "Exploitative Labor 12",
+        "name": "Child Sex Trafficking 8",
         "category": "Rehabilitation",
         "country": "Vietnam",
         "cost": 4600,
@@ -174,7 +174,7 @@
         "limit": 1
     },
     {
-        "name": "Child Sex Trafficking 11",
+        "name": "Child Sex Trafficking 9",
         "category": "Rehabilitation",
         "country": "Vietnam",
         "cost": 5100,
@@ -193,7 +193,7 @@
         "repeated": true
     },
     {
-        "name": "Child Trafficking 4",
+        "name": "Child Sex Trafficking 10",
         "category": "Investment",
         "country": "Cambodia",
         "cost": 10200,
@@ -239,7 +239,7 @@
         "limit": 1
     },
     {
-        "name": "Child Sex Trafficking 12",
+        "name": "Child Sex Trafficking 11",
         "category": "Investment",
         "country": "Cambodia",
         "cost": 15000,
@@ -257,7 +257,7 @@
         "limit": 1
     },
     {
-        "name": "Child Trafficking 10",
+        "name": "Child Sex Trafficking 12",
         "category": "Investment",
         "country": "Vietnam",
         "cost": 21300,
@@ -266,7 +266,7 @@
         "limit": 1
     },
     {
-        "name": "Child Sex Trafficking 13",
+        "name": "Child Trafficking 10",
         "category": "Investment",
         "country": "Cambodia",
         "cost": 34000,
@@ -275,7 +275,7 @@
         "limit": 1
     },
     {
-        "name": "Child Trafficking 11",
+        "name": "Child Sex Trafficking 13",
         "category": "Investment",
         "country": "Vietnam",
         "cost": 51200,
@@ -284,7 +284,7 @@
         "limit": 1
     },
     {
-        "name": "Child Trafficking 12",
+        "name": "Child Trafficking 11",
         "category": "Investment",
         "country": "Cambodia",
         "cost": 52500,
@@ -293,7 +293,7 @@
         "limit": 1
     },
     {
-        "name": "Child Trafficking 13",
+        "name": "Child Trafficking 12",
         "category": "Investment",
         "country": "Nepal",
         "cost": 162200,
