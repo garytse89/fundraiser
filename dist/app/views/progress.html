@@ -3,7 +3,7 @@
 <h2 style="text-align:center;color:gray;margin-bottom:10px">{{ donation_amount | currency:'HKD':0 }} raised out of {{ donation_target | currency:'HKD':0 }}</h2>
 <hr />
 
-<progressbar style="height:200px;position:relative"  class="progress" max="donation_target" value="donation_amount" type="{{ donation_amount | toColorClass:donation_target }}">
+<progressbar style="height:200px;position:relative"  class="progress progress-striped active" max="donation_target" value="donation_amount" type="{{ donation_amount | toColorClass:donation_target }}">
 	<span class="line-height:200px"><i style="font-style:normal;font-size:50px">{{ calculatePercentage(donation_amount, donation_target) | number:0 }}%</i></span>
 </progressbar>  
 <!-- {{ calculatePercentage(donation_amount, donation_target) }}% -->

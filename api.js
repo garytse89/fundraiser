@@ -115,24 +115,60 @@ module.exports = function(app) {
 		})		
 	})
 
+	app.post('/api/fund/RTST', function(req, res, next) {
+		Models.RTSTDonation.create({
+			name: req.param('name'),
+			email: req.param('email'),
+			phone_number: req.param('phone_number'),
+			amount: req.param('amount')
+		}).then(function(donator) {
+			return res.send(200)
+		}, function(err) {
+			return res.send(200, err)
+		})
+	})
 	/**
-	 * aggregate the total donation amount
+	 * aggregate the total donation amount, as well as by category
 	 */
 	app.get('/api/donations/countTotal', function(req, res, next) {
-		Models.Donation.aggregate(
-			{ $group: {
-				_id: null,
-				donation_total: { $sum: '$amount' }
-			} },
-			{ $project: {
-				_id: 0,
-				donation_total: '$donation_total'
+
+		Models.Project.aggregate(
+			{ $group : {
+				_id: '$category', 
+				ids: { $push: '$_id' }
 			} }
-		).exec().then(function(aggregate) {
-			return res.send(200, aggregate[0])
+		).exec().then(function(projects) {
+			console.log(projects)
+			var promises = []
+
+			_(projects).each(function(project) {
+				promises.push(Models.Donation.aggregate(
+					{ $match: { project_id: { 
+						$in: project.ids } } 
+					},
+					{ $group: {
+						_id: null,
+						donation_total: { $sum: '$amount' }
+					} },
+					{ $project: {
+						_id: 0,
+						donation_total: '$donation_total'
+					} }
+				).exec().then(function(donations) {
+					var donation = donations[0] ? donations[0] : { donation_total: 0 }
+					donation.category = project._id
+					console.log(donation)
+					return donation
+				}))
+			})
+
+			return q.all(promises)
+		}).then(function(promises) {
+			var data = _(promises).indexBy('category')
+			data.total = _(promises).reduce(function(memo, num) { return memo + num.donation_total }, 0)
+			return res.send(200, data)
 		}, function(err) {
-			console.log(err.stack)
-			return res.send(500, { error: err })
+			return res.send(200, err)
 		})
 	})
 

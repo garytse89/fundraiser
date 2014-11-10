@@ -42,6 +42,14 @@ module.exports = function(database_name) {
 		created_at: { type: Date, default: Date.now }
 	}, { collection: 'donations' }).index({ project_id: 1, name: 1 }, { unique: true })
 
+	var RTSTDonation = new Schema({
+		name: { type: String, required: true },
+		email: { type: String, required: true },
+		phone_number: { type: String, required: true },
+		amount: { type: Number, required: true },
+		created_at: { type: Date, default: Date.now }
+	}, { collection: 'rtst_donations' }).index({ project_id: 1, name: 1 }, { unique: true })
+
 	var Contact = new Schema({
 		properties: Schema.Types.Mixed
 	}, { collection: 'contacts'})
@@ -49,6 +57,7 @@ module.exports = function(database_name) {
 	return {
 		Project: db.model('Project', Project),
 		Donation: db.model('Donation', Donation),
+		RTSTDonation: db.model('RTSTDonation', RTSTDonation),
 		Category: db.model('Category', Category),
 		Contact: db.model('Contact', Contact)
 	}

@@ -34,8 +34,9 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->  
-    <div class="header" style="padding-left:20px;padding-right:20px;padding-bottom:20px">
-     <center><a href="/"><img src="../images/rtst.png"></a></center>
+    <div class="header clearfix" ng-controller="header" style="padding-left:20px;padding-right:20px;padding-bottom:20px">
+     <a class="pull-left" style="margin-top:5px" href="/"><img src="../images/rtst.png"></a>
+     <button type="button" class="pull-right btn btn-primary" ng-click="openDonateModal()">Donate directly to RTST</button>
     </div>
 
     <div class="container" style="max-width:none" ng-view=""></div>
@@ -91,6 +92,8 @@
         <script src="scripts/controllers/project.js"></script>
         <script src="scripts/controllers/pledge.js"></script>
         <script src="scripts/controllers/progress.js"></script>
+        <script src="scripts/controllers/header.js"></script>
+         <script src="scripts/controllers/rtst_donate_modal.js"></script>
 
         <script src="scripts/filters/numToWords.js"></script>
         <script src="scripts/filters/toColorClass.js"></script>

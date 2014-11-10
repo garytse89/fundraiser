@@ -23,9 +23,9 @@ module.exports = function(io) {
 				project_id: data.project_id
 			}).then(function(donator) {
 				// broadcast event to project channel (goes to everybody)
-				io.emit('project::funded', { project_id: data.project_id, amount: data.amount });
+				io.emit('project::funded', { project_id: data.project_id, project_category: data.project_category, amount: data.amount });
 				// broadcast event to main channel for progress bar (broadcast to everybody including current user)
-				io.emit('pledge::new', { project_id: data.project_id, amount: data.amount })
+				io.emit('pledge::new', { project_id: data.project_id, project_category: data.project_category, amount: data.amount })
 
 				return Models.Project.findOneAndUpdate({ 
 						_id: data.project_id

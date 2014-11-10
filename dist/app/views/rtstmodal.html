@@ -1,0 +1,66 @@
+<div class="modal-header clearfix">
+    <h3 class="pull-left modal-title">Donate directly to RTST</h3>
+    <button type="button" class="pull-right btn btn-danger" ng-click="close()">Close</button>
+</div>
+<div class="modal-body">
+    A direct donation to Running to Stop the Traffik will support our continuing commitment to fighting slavery by inspiring and engaging a generation of young people, as well as our efforts to make innovative and substantial change in the course of slavery in Southeast Asia.
+    <hr />
+
+  <div ng-show="!show_confirmation && !show_thankyou">
+
+    <div class="form-group">
+      <label for="email">Pledge Amount (HKD)</label>
+      <input type="Number" ng-model="amount" class="form-control" required>
+    </div>
+     
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" typeahead="contact as contact.properties.name[0].value for contact in findContacts($viewValue)" class="form-control" typeahead-on-select="selectContact($item, $model, $label)" placeholder="Enter your name" ng-model="selected_contact.name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input ng-model="selected_contact.email" class="form-control" required placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="phone_number">Phone Number</label>
+      <input ng-model="selected_contact.phone_number" class="form-control" required placeholder="Enter phone number">
+    </div>
+  </div>
+
+  <div ng-if="show_confirmation">
+    <div class="alert alert-danger" ng-show="show_warning_label" role="alert">
+      <strong>Warning!</strong> Your donation failed to register. Please try again.
+    </div>
+    <div style="color:#916f35" class="alert alert-warning" role="alert"><strong>Please review your donation</strong>
+        <hr />
+        <p>I would like to donate <strong>{{ amount | currency:'HKD' }}</strong> directly to <strong>Running to Stop the Traffik</strong>.<br /><br />
+
+          My contact details are:
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <p>Name: {{ selected_contact.name }}</p>
+              <p>E-mail: {{ selected_contact.email }}</p>
+              <p>Contact number: {{ selected_contact.phone_number }}</p>
+            </div>
+          </div>
+        </p>
+    </div>
+  </div>
+
+  <div ng-if="!show_confirmation && show_thankyou">
+    <div class="alert alert-success" role="alert"><strong>Thank you!</strong>
+        <hr />
+        <p>Thank you {{ selected_contact.name }} for donating to Running to Stop the Traffik!
+        </p>
+    </div>
+  </div>
+
+</div>
+
+<div class="modal-footer" ng-if="!show_thankyou">
+    <button type="submit" class="btn btn-success" ng-click="donateRTST()">Donate to RTST</button>
+    <button type="submit" ng-if="show_confirmation" class="btn btn-default" ng-click="back()">Back</button>
+</div>
+<div class="modal-footer" ng-if="show_thankyou">
+    <button type="submit" class="btn btn-default" ng-click="close()">Close</button>
+</div>

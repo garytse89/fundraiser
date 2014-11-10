@@ -1,48 +1,28 @@
 'use strict';
 
 angular.module('distApp')
-  .controller('PledgeModalCtrl', ['$scope', '$routeParams', 'API', 'Socket', 'project', '$modalInstance', 
-    function($scope, $routeParams, API, Socket, project, $modalInstance) {
-
-  // amount field is enabled by default
-  $scope.amount_disabled = false;
-
-  $scope.project = project
-  $scope.amount = project.cost // the user won't be able to set the pledge amount
-  
-  // and it will default to the cost of the project if under 40k
-  if (project.cost < 40000) {
-    $scope.amount_disabled = true
-  }
-
-  if (project.limit == 0) {
-    $scope.already_funded = true
-  }
+  .controller('RTSTDonateModalCtrl', ['$scope', 'API', '$modalInstance', function($scope, API, $modalInstance) {
 
   $scope.close = function() {
     $modalInstance.close()
   }
 
-  $scope.submitPledge = function() {
-
+  $scope.donateRTST = function() {
+    
     if (!$scope.show_confirmation) {
       $scope.show_confirmation = true
       return
     }
 
     var data = _($scope.selected_contact).extend({
-      amount: $scope.amount, 
-      project_id: project._id,
-      project_category: project.category 
+      amount: $scope.amount 
     })
 
-    Socket.emit('project::fund', data, function(err) {
-      if (err) {
-        $scope.show_warning_label = true
-      } else {
-        $scope.show_confirmation = false
-        $scope.show_thankyou = true
-      }
+    API.fundRTST(data).$promise.then(function() {
+      $scope.show_confirmation = false
+      $scope.show_thankyou = true
+    }, function(err) {
+      $scope.show_warning_label = true
     })
     
   }
@@ -62,6 +42,7 @@ angular.module('distApp')
     $scope.selected_contact = contact
     return
   }
+ 
   /* contact_list that is returned should take on the form of:
   * [ { 'properties' : { 'name' : { 'value' : 'Interstellar' } } } ]
   */
@@ -71,12 +52,6 @@ angular.module('distApp')
       return contact_list
     })
   }
-
-  Socket.on('project::funded', function(data) {
-    if (data.project_id == project._id) {
-      $scope.already_funded = true
-    }
-  })
 
 }]);
 

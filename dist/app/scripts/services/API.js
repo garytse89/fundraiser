@@ -39,6 +39,10 @@ angular.module('distApp')
 				},
 				url: baseUrl + '/:project_id/fund'
 			},
+			fundRTST: {
+				method: 'POST',
+				url: '/api/fund/RTST'
+			},
 			countDonations: {
 				method: 'GET',
 				url: '/api/donations/countTotal'

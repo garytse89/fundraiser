@@ -1,16 +1,13 @@
 'use strict';
 
 angular.module('distApp')
-  .controller('header', ['$scope', 'API', 'Socket', function ($scope, API, Socket) {
+  .controller('header', ['$scope', 'API', '$modal', function ($scope, API, $modal) {
 
-    $scope.donation_target = 500000;
-
-  	API.countDonations().$promise.then(function(total) {
-      $scope.donation_amount = total.donation_total
-    })
-
-    Socket.on('project::funded', function(data) {
-      $scope.donation_amount += data.amount
-	  })
+    $scope.openDonateModal = function() {
+	    var modalInstance = $modal.open({
+	        templateUrl: 'views/rtstmodal.html',
+	        controller: 'RTSTDonateModalCtrl'
+	      })
+    }
 
 }]);

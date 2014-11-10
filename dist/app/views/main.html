@@ -3,19 +3,19 @@
   <div class="row">
 
     <div class="col-xs-3">
-      <h3 class="text-muted">{{ current_category.toUpperCase() }}</h3> 
+      <h3 class="text-muted">{{ current_category | uppercase }}</h3> 
     </div>
 
     <div class="col-xs-9 padtop">
-      <div ng-if="current_category === 'Rescue'">
-        <progressbar class="progress-striped active vcenter" max="total_rescue" value="current_rescue" type="{{ current_rescue | toColorClass:current_rescue }}"><i>{{ current_rescue | currency:'HKD' }} / {{ total_rescue | currency:'HKD'}}</i></progressbar>
+      <div ng-show="current_category == 'Rescue'">
+        <progressbar class="progress progress-striped active vcenter" max="rescue_total" value="accumulated.Rescue" type="{{ accumulated.Rescue | toColorClass:rescue_total }}"><i>{{ accumulated.Rescue | currency:'HKD' }} / {{ rescue_total | currency:'HKD' }}</i></progressbar>
       </div>
-      <div ng-if="current_category === 'Rehabilitation'">
-        <progressbar class="progress-striped active" max="total_rehabilitation" value="current_rehabilitation" type="{{ current_rehabilitation | toColorClass:current_rehabilitation }}"><i>{{ current_rehabilitation | currency:'HKD' }} / {{ total_rehabilitation | currency:'HKD'}}</i></progressbar>
+      <div ng-show="current_category == 'Rehabilitation'">
+        <progressbar class="progress progress-striped active vcenter" max="rehabilitation_total" value="accumulated.Rehabilitation" type="{{ accumulated.Rehabilitation | toColorClass:rehabilitation_total }}"><i>{{ accumulated.Rehabilitation | currency:'HKD' }} / {{ rehabilitation_total | currency:'HKD' }}</i></progressbar>
       </div>
-      <div ng-if="current_category === 'Investment'">
-        <progressbar class="progress-striped active" max="total_investment" value="current_investment" type="{{ current_investment | toColorClass:current_investment }}"><i>{{ current_investment | currency:'HKD' }} / {{ total_investment | currency:'HKD'}}</i></progressbar>
-      </div>  
+      <div ng-show="current_category == 'Investment'">
+        <progressbar class="progress progress-striped active vcenter" max="investment_total" value="accumulated.Investment" type="{{ accumulated.Investment | toColorClass:investment_total }}"><i>{{ accumulated.Investment | currency:'HKD' }} / {{ investment_total | currency:'HKD' }}</i></progressbar>
+      </div>
     </div>
 
   </div>

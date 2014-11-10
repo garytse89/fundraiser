@@ -4,6 +4,18 @@ angular.module('distApp')
   .controller('MainCtrl', ['$scope', '$routeParams', 'API', 'Socket', '$modal', '$location', function ($scope, $routeParams, API, Socket, $modal, $location) {
 
   	$scope.category = $routeParams.category
+    
+    $scope.rescue_total = 116645
+    $scope.rehabilitation_total = 340280
+    $scope.investment_total = 511850
+
+    API.countDonations().$promise.then(function(donations) {
+        $scope.accumulated = {
+          Rescue: donations.Rescue.donation_total,
+          Rehabilitation: donations.Rehabilitation.donation_total,
+          Investment: donations.Investment.donation_total
+        }
+    })
 
     API.projects({ category: $scope.category }).$promise.then(function(projects) {
       $scope.projects = projects    
@@ -13,7 +25,6 @@ angular.module('distApp')
         if (project.limit <= -1) project.unlimited = true
       })     
 
-      $scope.calculateTotals(projects)
     })
 
    	$scope.current_category = $scope.category
@@ -30,41 +41,10 @@ angular.module('distApp')
 
    	})
 
-    $scope.calculateTotals = function(projects) {
-
-      // pre-calculated totals
-      $scope.total_rescue = 116645
-      $scope.total_rehabilitation = 340280
-      $scope.total_investment = 511850
-
-      // calculate total so far 
-      var sum_rescue = 0
-      var sum_rehabilitation = 0
-      var sum_investment = 0
-
-      angular.forEach(projects, function(project) {  
-        if (project.limit > 0) { // don't bother adding in the unlimited projects
-          if (project.category === "Rescue") {
-            sum_rescue += project.cost * project.limit
-          } else if (project.category === "Rehabilitation") {
-            sum_rehabilitation += project.cost * project.limit
-          } else {
-            sum_investment += project.cost * project.limit
-          }
-        }
-      })
-
-      $scope.current_rescue = $scope.total_rescue - sum_rescue
-      $scope.current_rehabilitation = $scope.total_rehabilitation - sum_rehabilitation
-      $scope.current_investment = $scope.total_investment - sum_investment
-    }
-
    	$scope.switchCategory = function(category) {
    		API.projects({ category: category }).$promise.then(function(projects) {
         $scope.current_category = category
         $scope.projects = projects
-
-        $scope.calculateTotals(projects)
       })
    	}
 
@@ -83,15 +63,13 @@ angular.module('distApp')
   	Socket.on('project::funded', function(data) {
       console.log(data)
 
-      API.projects().$promise.then(function(projects) {
-        $scope.projects = projects   
-        $scope.calculateTotals(projects)
-      })
+      var category = data.project_category
+
+      $scope.accumulated[category] += data.amount
 
   		$scope.$apply(function() {
 		    _($scope.projects).map(function(project) {
 		    	if (project._id == data.project_id) {
-            console.log(project)
             project.limit -= 1
 		    	}
 		    	return project
