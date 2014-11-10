@@ -30,7 +30,7 @@ module.exports = function(database_name) {
 		short_description: { type: String, required: true },
 		description: { type: String, required: true },
 		limit: { type: Number, required: true, default: 1, min: 0 }, // most projects will disappear after being funded (limit=1); others might be repeatable
-		repeated: { type: Boolean }
+		increment: { type: Number }
 	}, { collection: 'projects' }).index({ name: 1 }, { unique: true, sparse: true })
 
 	var Donation = new Schema({

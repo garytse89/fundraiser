@@ -59,9 +59,10 @@
         "category": "Rescue",
         "country": "Cambodia",
         "cost": 48000,
+        "increment": 9600,
         "short_description": "Fund a brothel rescue in December 2014 for trafficked underage girls",
         "description": "This operation will be implemented by APLE Cambodia, an organization based in Phnom Penh whose primary mission is to disrupt the trafficking of children into forced prostitution. APLE is currently investigating the case of a facility operating as a potential haven for the sex trafficking of underage girls and anticipates being able to conduct a raid before the end of 2014.",
-        "limit": 1
+        "limit": 1        
     },
     {
         "name": "Child Sex Trafficking 6",
@@ -279,6 +280,7 @@
         "category": "Investment",
         "country": "Vietnam",
         "cost": 51200,
+        "increment" : 10240,
         "short_description": "Fund a grassroots awareness campaign over radio and media to share survivors’ stories",
         "description": "This campaign is a 2015 priority of SUKA Society, an NGO dedicated to the security and welfare of children trafficked into Malaysia, a major destination country for trafficking victims and slavery abuses. Despite this status as a destination country, trafficking remains an issue of little urgency and understanding. SUKA wants to invest in a media campaign to share the stories of willing survivors and empower Malaysian society to learn about slavery and demand change.",
         "limit": 1
@@ -288,6 +290,7 @@
         "category": "Investment",
         "country": "Cambodia",
         "cost": 52500,
+        "increment" : 10500,
         "short_description": "Fund a media campaign to facilitate education, awareness and vigilance on trafficking",
         "description": "This campaign will be implemented by APLE Cambodia, an organization whose primary mission is to disrupt the trafficking of children into forced prostitution. In 2015 they intend to reach out into grassroots community through print and radio media, as well as through educated advocates and allies. teach communities, families, and parents about the vulnerabilities that lead to trafficking and the worst practices of the traffickers. This awareness can stop trafficking at its source.",
         "limit": 1
@@ -297,6 +300,7 @@
         "category": "Investment",
         "country": "Nepal",
         "cost": 162200,
+        "increment": 16220,
         "short_description": "Fund a Child Trauma Management Centre, an innovative home for those rescued from abuse",
         "description": "In 2015 Freedom Matters wants to launch a Child Trauma Management Centre, a facility desperately lacking in Kathmandu that would possess the capacity to psychologically rehabilitate children rescued from trafficking, exploitation, and abuse. Freedom Matters is an NGO in Nepal that combats the trafficking and abuse of children, 70% of whom are estimated to have parents and families, in child homes and orphanages. However this centre would help children recovered from forced labor and domestic abuse as well. These resources are entirely absent in Nepal, where there is little focus on rebuilding the personhood and self-esteem of broken children. Help Freedom Matters change this.",
         "limit": 1

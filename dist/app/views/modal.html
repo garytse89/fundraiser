@@ -17,7 +17,12 @@
 
     <div class="form-group">
       <label for="email">Pledge Amount (HKD)</label>
-      <input type="Number" ng-model="amount" ng-disabled="already_funded || amount_disabled" class="form-control" required placeholder="{{ amount }}">
+      <div ng-show="!high_cost_project">
+        <input type="Number" ng-model="amount" ng-disabled="already_funded || amount_disabled" class="form-control" required placeholder="{{ amount }}">
+      </div>
+      <div ng-show="high_cost_project">
+        <input type="Number" ng-model="cost_increment" class="form-control" required placeholder="{{ cost_increment }}" step="{{ cost_increment }}">
+      </div>
     </div>
      
     <div class="form-group">
@@ -40,7 +45,11 @@
     </div>
     <div style="color:#916f35" class="alert alert-warning" role="alert"><strong>Please review your project choice</strong>
         <hr />
-        <p>I would like to sponsor a {{ project.category | lowercase }} project and pledge <strong>{{ amount | currency:'HKD' }}</strong> that will go towards the following project: <strong>{{ project.name | lowercase }}</strong>.<br /><br />
+        <p>I would like to sponsor a {{ project.category | lowercase }} project and pledge <strong> 
+        <div ng-if="amount <= cost_increment">{{ amount | currency:'HKD' }}</div>
+        <div ng-if="amount > cost_increment">{{ cost_increment | currency:'HKD' }}</div>
+        </strong>
+         that will go towards the following project: <strong>{{ project.name | lowercase }}</strong>.<br /><br />
 
           My contact details are:
           <div class="panel panel-default">

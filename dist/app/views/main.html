@@ -55,6 +55,7 @@
             <p><b>Status: </b><span ng-show="project.limit == 0" class="label label-sm label-danger">Funded</span><span ng-show="project.limit != 0" class="label label-sm label-success">Available</span><p>
             <p><b>Country: </b>{{ project.country }}</p>
             <p><b>Amount: </b>{{ project.cost | currency:'HKD' }}</p>
+            <span ng-show="project.increment"><p><i>*You may contribute a HKD{{ project.increment }} donation that goes towards the overall cost of this project</i></p></span>
             <p><b>Donations Needed:</b> <span ng-show="project.limit >= 0">{{ project.limit }}</span><span ng-show="project.limit < 0">50</span></p>
             <p>{{ project.short_description }}</p>
             <p><a class="btn btn-default" role="button" ng-click="openProjectModal(project)">Find Out More!</a></p>

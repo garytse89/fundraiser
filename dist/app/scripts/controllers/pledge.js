@@ -13,6 +13,10 @@ angular.module('distApp')
   // and it will default to the cost of the project if under 40k
   if (project.cost < 40000) {
     $scope.amount_disabled = true
+    $scope.high_cost_project = false
+  } else {
+    $scope.high_cost_project = true
+    $scope.cost_increment = project.increment
   }
 
   if (project.limit == 0) {
@@ -25,7 +29,22 @@ angular.module('distApp')
 
   $scope.submitPledge = function() {
 
-    if (!$scope.show_confirmation) {
+    if ($scope.show_confirmation) {
+
+      var data = _($scope.selected_contact).extend({
+        amount: Math.min($scope.amount, $scope.cost_increment), 
+        project_id: project._id 
+      })
+
+      Socket.emit('project::fund', data, function(err) {
+        if (err) {
+          $scope.show_warning_label = true
+        } else {
+          $scope.show_confirmation = false
+          $scope.show_thankyou = true
+        }
+      })
+    } else {
       $scope.show_confirmation = true
       return
     }
