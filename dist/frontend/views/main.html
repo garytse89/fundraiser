@@ -32,7 +32,7 @@
             <h3><b>{{ project.name.toUpperCase() }}</b></h3>
             <p><b>Status: </b><span ng-show="project.limit == 0" class="label label-sm label-danger">Funded</span><span ng-show="project.limit != 0" class="label label-sm label-success">Available</span></p><p>
             </p><p><b>Country: </b>{{ project.country }}</p>
-            <p><b>Donation Cost: </b>{{ project.cost | currency:'HKD' }}</p>
+            <p><b>Amount: </b>{{ project.cost | currency:'HKD' }}</p>
             <p><b>Donations Needed:</b> <span ng-show="project.limit >= 0">{{ project.limit }}</span><span ng-show="project.limit < 0">50</span></p>
             <p>{{ project.short_description }}</p>
             <p><a class="btn btn-default" role="button" ng-click="openProjectModal(project)">Find Out More!</a></p>
