@@ -1,6 +1,7 @@
 [
     {
         "name": "Child Sex Trafficking 1",
+        "type": "Child Sex Trafficking",
         "category": "Rescue",
         "country": "Cambodia",
         "cost": 595,
@@ -10,6 +11,7 @@
     },
     {
         "name": "Child Sex Trafficking 2",
+        "type": "Child Sex Trafficking",
         "category": "Rescue",
         "country": "Cambodia",
         "cost": 1250,
@@ -19,6 +21,7 @@
     },
     {
         "name": "Orphan Business 1",
+        "type": "Orphan Business",
         "category": "Rescue",
         "country": "Cambodia",
         "cost": 3400,
@@ -29,6 +32,7 @@
     },
     {
         "name": "Child Sex Trafficking 3",
+        "type": "Child Sex Trafficking",
         "category": "Rescue",
         "country": "Cambodia",
         "cost": 3850,
@@ -38,6 +42,7 @@
     },
     {
         "name": "Child Sex Trafficking 4",
+        "type": "Child Sex Trafficking",
         "category": "Rescue",
         "country": "Vietnam",
         "cost": 25500,
@@ -47,6 +52,7 @@
     },
     {
         "name": "Exploitative Labor 1",
+        "type": "Exploitative Labor",
         "category": "Rescue",
         "country": "Vietnam",
         "cost": 27700,
@@ -56,6 +62,7 @@
     },
     {
         "name": "Child Sex Trafficking 5",
+        "type": "Child Sex Trafficking",
         "category": "Rescue",
         "country": "Cambodia",
         "cost": 48000,
@@ -66,6 +73,7 @@
     },
     {
         "name": "Child Sex Trafficking 6",
+        "type": "Child Sex Trafficking",
         "category": "Rehabilitation",
         "country": "Vietnam",
         "cost": 850,
@@ -75,6 +83,7 @@
     },
     {
         "name": "Exploitative Labor 2",
+        "type": "Exploitative Labor",
         "category": "Rehabilitation",
         "country": "Singapore",
         "cost": 850,
@@ -84,6 +93,7 @@
     },
     {
         "name": "Child Labor 1",
+        "type": "Child Labor",
         "category": "Rehabilitation",
         "country": "Vietnam",
         "cost": 1300,
@@ -94,6 +104,7 @@
     },
     {
         "name": "Child Sex Trafficking 7",
+        "type": "Child Sex Trafficking",
         "category": "Rehabilitation",
         "country": "Cambodia",
         "cost": 1980,
@@ -103,6 +114,7 @@
     },
     {
         "name": "Exploitative Labor 3",
+        "type": "Exploitative Labor",
         "category": "Rehabilitation",
         "country": "Singapore",
         "cost": 3200,
@@ -112,6 +124,7 @@
     },
     {
         "name": "Child Sex Trafficking 8",
+        "type": "Child Sex Trafficking",
         "category": "Rehabilitation",
         "country": "Vietnam",
         "cost": 4600,
@@ -121,6 +134,7 @@
     },
     {
         "name": "Child Trafficking 1",
+        "type": "Child Trafficking",
         "category": "Rehabilitation",
         "country": "Nepal",
         "cost": 6100,
@@ -130,6 +144,7 @@
     },
     {
         "name": "Child Labor 2",
+        "type": "Child Labor",
         "category": "Rehabilitation",
         "country": "Nepal",
         "cost": 8250,
@@ -140,6 +155,7 @@
     },
     {
         "name": "Child Trafficking 2",
+        "type": "Child Trafficking",
         "category": "Rehabilitation",
         "country": "Malaysia",
         "cost": 10500,
@@ -149,6 +165,7 @@
     },
     {
         "name": "Child Labor 3",
+        "type": "Child Labor",
         "category": "Rehabilitation",
         "country": "Nepal",
         "cost": 13500,
@@ -158,6 +175,7 @@
     },
     {
         "name": "Child Labor 4",
+        "type": "Child Labor",
         "category": "Rehabilitation",
         "country": "Nepal",
         "cost": 16400,
@@ -167,6 +185,7 @@
     },
     {
         "name": "Child Labor 5",
+        "type": "Child Labor",
         "category": "Rehabilitation",
         "country": "Nepal",
         "cost": 30250,
@@ -176,6 +195,7 @@
     },
     {
         "name": "Child Sex Trafficking 9",
+        "type": "Child Sex Trafficking",
         "category": "Rehabilitation",
         "country": "Vietnam",
         "cost": 5100,
@@ -185,6 +205,7 @@
     },
     {
         "name": "Child Trafficking 3",
+        "type": "Child Trafficking",
         "category": "Investment",
         "country": "Nepal",
         "cost": 6800,
@@ -195,6 +216,7 @@
     },
     {
         "name": "Child Sex Trafficking 10",
+        "type": "Child Sex Trafficking",
         "category": "Investment",
         "country": "Cambodia",
         "cost": 10200,
@@ -204,6 +226,7 @@
     },
     {
         "name": "Child Trafficking 5",
+        "type": "Child Trafficking",
         "category": "Investment",
         "country": "Malaysia",
         "cost": 13000,
@@ -213,6 +236,7 @@
     },
     {
         "name": "Child Trafficking 6",
+        "type": "Child Trafficking",
         "category": "Investment",
         "country": "Malaysia",
         "cost": 13000,
@@ -223,6 +247,7 @@
     },
     {
         "name": "Child Trafficking 7",
+        "type": "Child Trafficking",
         "category": "Investment",
         "country": "Nepal",
         "cost": 13250,
@@ -232,6 +257,7 @@
     },
     {
         "name": "Child Trafficking 8",
+        "type": "Child Trafficking",
         "category": "Investment",
         "country": "Nepal",
         "cost": 13600,
@@ -241,6 +267,7 @@
     },
     {
         "name": "Child Sex Trafficking 11",
+        "type": "Child Sex Trafficking",
         "category": "Investment",
         "country": "Cambodia",
         "cost": 15000,
@@ -250,6 +277,7 @@
     },
     {
         "name": "Child Trafficking 9",
+        "type": "Child Trafficking",
         "category": "Investment",
         "country": "Malaysia",
         "cost": 15800,
@@ -259,6 +287,7 @@
     },
     {
         "name": "Child Sex Trafficking 12",
+        "type": "Child Sex Trafficking",
         "category": "Investment",
         "country": "Vietnam",
         "cost": 21300,
@@ -268,6 +297,7 @@
     },
     {
         "name": "Child Trafficking 10",
+        "type": "Child Trafficking",
         "category": "Investment",
         "country": "Cambodia",
         "cost": 34000,
@@ -277,6 +307,7 @@
     },
     {
         "name": "Child Sex Trafficking 13",
+        "type": "Child Trafficking",
         "category": "Investment",
         "country": "Vietnam",
         "cost": 51200,
@@ -287,6 +318,7 @@
     },
     {
         "name": "Child Trafficking 11",
+        "type": "Child Trafficking",
         "category": "Investment",
         "country": "Cambodia",
         "cost": 52500,
@@ -297,12 +329,13 @@
     },
     {
         "name": "Child Trafficking 12",
+        "type": "Child Trafficking",
         "category": "Investment",
         "country": "Nepal",
         "cost": 162200,
         "increment": 16220,
         "short_description": "Fund a Child Trauma Management Centre, an innovative home for those rescued from abuse",
-        "description": "In 2015 Freedom Matters wants to launch a Child Trauma Management Centre, a facility desperately lacking in Kathmandu that would possess the capacity to psychologically rehabilitate children rescued from trafficking, exploitation, and abuse. Freedom Matters is an NGO in Nepal that combats the trafficking and abuse of children, 70% of whom are estimated to have parents and families, in child homes and orphanages. However this centre would help children recovered from forced labor and domestic abuse as well. These resources are entirely absent in Nepal, where there is little focus on rebuilding the personhood and self-esteem of broken children. Help Freedom Matters change this.",
+        "description": "In 2015 Freedom Matters wants to launch and sustain for three years a Child Trauma Management Centre, a facility desperately lacking in Kathmandu that would possess the capacity to psychologically rehabilitate children rescued from trafficking, exploitation, and abuse. Freedom Matters is an NGO in Nepal that combats the trafficking and abuse of children, 70% of whom are estimated to have parents and families, in child homes and orphanages. However this centre would help children recovered from forced labor and domestic abuse as well. These resources are entirely absent in Nepal, where there is little focus on rebuilding the personhood and self-esteem of broken children. Help Freedom Matters change this.",
         "limit": 1
     }
 ]
