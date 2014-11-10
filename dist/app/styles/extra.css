@@ -15,3 +15,7 @@ thover:hover, thover:focus: {
 .vmargin {
 	margin-bottom: 3em;
 }
+
+.padtop {
+    padding-top: 10px;
+}
