@@ -1,0 +1,337 @@
+[
+    {
+        "name": "Project 1",
+        "cause": "Child sex trafficking",
+        "category": "Rescue",
+        "country": "Cambodia",
+        "cost": 595,
+        "short_description": "Reintegrate a child sex trafficking victim",
+        "description": "This operation will be implemented by APLE Cambodia, an organization based in Phnom Penh whose primary mission is to disrupt the trafficking of children into forced prostitution. For an individual child rescued from the sex trade, funds are required to provide necessary services, such as aftercare, counseling, referrals, and financial support to the child and his or her family, on a case by case basis to ensure successful reintegration into society.",
+        "limit": 1
+    },
+    {
+        "name": "Project 2",
+        "cause": "Child sex trafficking",
+        "category": "Rescue",
+        "country": "Cambodia",
+        "cost": 1250,
+        "short_description": "Fund the investigation from a tip to identify a child in the sex trade",
+        "description": "This operation will be implemented by APLE Cambodia, an organization based in Phnom Penh whose primary mission is to disrupt the trafficking of children into forced prostitution. As a leader in child protection, APLE receives tips from families, the public, and the police on potential cases of child abuse and exploitation, and deploys an investigative team to pursue these leads. Flexible funds are critical to support these operations.",
+        "limit": 1
+    },
+    {
+        "name": "Project 3",
+        "cause": "Orphan Business",
+        "category": "Rescue",
+        "country": "Cambodia",
+        "cost": 3400,
+        "short_description": "Fund a rescue operation for children in rogue orphanages",
+        "description": "These rescues are being planned by Freedom Matters, an NGO in Nepal that combats the trafficking and abuse of children, 70% of whom are estimated to have parents and families, in child homes and orphanages. Freedom Matters is currently investigating four orphanages on child trafficking and exploitation, with rescues expected to be conducted in the first half of 2015. ",
+        "limit": 4,
+        "repeated": true
+    },
+    {
+        "name": "Project 4",
+        "cause": "Child sex trafficking",
+        "category": "Rescue",
+        "country": "Cambodia",
+        "cost": 3850,
+        "short_description": "Rescue one child from Phnom Penh's sex trade by funding day-of extraction costs",
+        "description": "This operation will be implemented by APLE Cambodia, an organization based in Phnom Penh whose primary mission is to disrupt the trafficking of children into forced prostitution. On the day of a rescue operation, APLE must be prepared with vehicles to secure and transport children, emergency medical, clothing, and sustenance support, as well as personnel and communications equipment.",
+        "limit": -1
+    },
+    {
+        "name": "Project 5",
+        "cause": "Child sex trafficking",
+        "category": "Rescue",
+        "country": "Vietnam",
+        "cost": 25500,
+        "short_description": "Rescue one girl trafficked into the Vietnam-China sex trade",
+        "description": "This rescue will be conducted by Blue Dragon Children’s Foundation, which rescues and rehabilitates children from forced labor in Vietnam and young girls trafficked into the Vietnamese-Chinese sex trade. Blue Dragon is the only NGO in Vietnam to rescue girls directly from their place of slavery, responding directly to families’ calls for help, investigating and identifying the girls, and risking danger to their staff to secure their rescue.",
+        "limit": 1
+    },
+    {
+        "name": "Project 6",
+        "cause": "Exploitative Labour",
+        "category": "Rescue",
+        "country": "Vietnam",
+        "cost": 27700,
+        "short_description": "Rescue 10 children from a confined garment factory in Ho Chi Minh City",
+        "description": "This rescue will be conducted by Blue Dragon Children’s Foundation, which rescues and rehabilitates children from forced labor in Vietnam and young girls trafficked into the Vietnamese-Chinese sex trade. Children are too often employed in sweatshops and garment factories in Ho Chi Minh City, where Blue Dragon focuses its investigative and rescue efforts. These funds will provide the personnel, equipment, and intelligence to extract these exploited children.",
+        "limit": 1
+    },
+    {
+        "name": "Project 7",
+        "cause": "Child trafficking",
+        "category": "Rescue",
+        "country": "Cambodia",
+        "cost": 48000,
+        "short_description": "Fund a brothel rescue in December 2014 for trafficked underage girls",
+        "description": "This operation will be implemented by APLE Cambodia, an organization based in Phnom Penh whose primary mission is to disrupt the trafficking of children into forced prostitution. APLE is currently investigating the case of a facility operating as a potential haven for the sex trafficking of underage girls and anticipates being able to conduct a raid before the end of 2014.",
+        "limit": 1
+    },
+    {
+        "name": "Project 8",
+        "cause": "Child sex trafficking",
+        "category": "Rehabilitation",
+        "country": "Vietnam",
+        "cost": 850,
+        "short_description": "Provide medical care, including HIV support, for one girl rescued from the sex trade",
+        "description": "This project will be conducted by Blue Dragon Children’s Foundation, which rescues and rehabilitates children from forced labor in Vietnam and young girls trafficked into the Vietnamese-Chinese sex trade. Blue Dragon ensures that after rescue girls receive immediate and sustained medical attention, including testing for HIV, regular check ups, medicines, and other necessary specialist care.",
+        "limit": 1
+    },
+    {
+        "name": "Project 9",
+        "cause": "Exploitative Labour",
+        "category": "Rehabilitation",
+        "country": "Singapore",
+        "cost": 850,
+        "short_description": "Provide English language and computer classes to empower an exploited labor migrant",
+        "description": "HOME (Humanitarian Organization for Migration Economics) works to secure the rights of exploited migratory workers in Singapore - most of whom are in construction or domestic work (the industries most prone to trafficking there) - through advocacy and critical services. HOME provides transitional shelter to those most vulnerable, and offers courses in English language and computer skills like Microsoft Office to empower their dignity and prospects for recovery.",
+        "limit": 1
+    },
+    {
+        "name": "Project 10",
+        "cause": "Child Labor",
+        "category": "Rehabilitation",
+        "country": "Vietnam",
+        "cost": 1300,
+        "short_description": "Fund education for a child rescued from bonded labor",
+        "description": "The education of these children will be sponsored directly by Blue Dragon Children’s Foundation, which rescues and rehabilitates children from forced labor in Vietnam and young girls trafficked into the Vietnamese-Chinese sex trade. Their comprehensive rehabilitation programming includes the education of rescued children if their families cannot afford it - too often children who’ve been trafficked into factory labor are desperately poor and vulnerable to re-exploitation after rescue. Without this opportunity their future is without hope. ",
+        "limit": 50,
+        "repeated": true
+    },
+    {
+        "name": "Project 11",
+        "cause": "Child Sex Trafficking",
+        "category": "Rehabilitation",
+        "country": "Cambodia",
+        "cost": 1980,
+        "short_description": "Provide legal aid for prosecution and compensation to a survivor of trafficking",
+        "description": "This project will be implemented by APLE Cambodia, an organization based in Phnom Penh whose primary mission is to disrupt the trafficking of children into forced prostitution. APLE guides survivors through the legal process, an exceedingly difficult time for a young person rescued from exploitation in the sex industry. This is to ensure not only a successful prosecution, but that the survivor is granted compensation and access to needed government services.",
+        "limit": 1
+    },
+    {
+        "name": "Project 12",
+        "cause": "Exploitative Labour",
+        "category": "Rehabilitation",
+        "country": "Singapore",
+        "cost": 3200,
+        "short_description": "Provide shelter, counselling, and legal aid to a survivor of exploited labor migration",
+        "description": "HOME (Humanitarian Organization for Migration Economics) works to secure the rights of exploited migratory workers in Singapore - most of whom are in construction or domestic work, the industries most prone to trafficking there - through advocacy and critical services. HOME operates two transitional shelters in Singapore to provide resources, security and dignity to the most vulnerable of the exploited migrant worker population. This sum will allow HOME to support one person for a month’s time in one of their shelter homes.",
+        "limit": -1
+    },
+    {
+        "name": "Project 13",
+        "cause": "Exploitative Labour",
+        "category": "Rehabilitation",
+        "country": "Vietnam",
+        "cost": 4600,
+        "short_description": "Provide housing for one rescued survivor who are unable to reintegrate due to social stigma",
+        "description": "This project will be conducted by Blue Dragon Children’s Foundation, which rescues and rehabilitates children from forced labor in Vietnam and young girls trafficked into the Vietnamese-Chinese sex trade. After rescue, Blue Dragon has found that many young girls are not welcome back to their villages due to discrimination and social stigma, despite the fact that their participation in the sex trade was forced. With these funds Blue Dragon will be able to relocate one girl to Hanoi and provide accommodation and meals for one year.",
+        "limit": -1
+    },
+    {
+        "name": "Project 14",
+        "cause": "Child trafficking",
+        "category": "Rehabilitation",
+        "country": "Nepal",
+        "cost": 6100,
+        "short_description": "Support schooling and family income to invest in the future of a rescued child",
+        "description": "This project will be implemented by Freedom Matters, an NGO in Nepal that combats the trafficking and abuse of children, 70% of whom are estimated to have parents and families, in child homes and orphanages. After rescue and reintegration with their families and communities, children are at risk of being re-trafficked if they are  not in school and if the desperation that fueled the initial trafficking is not addressed. Freedom Matters provides extensive monitoring and follow up of the children they reintegrate into remote, mountain communities. ",
+        "limit": 1
+    },
+    {
+        "name": "Project 15",
+        "cause": "Child Labour",
+        "category": "Rehabilitation",
+        "country": "Nepal",
+        "cost": 8250,
+        "short_description": "Provide food, clothing, & education for one month, for a child who is unable to be reintegrated",
+        "description": "This project will be implemented by Freedom Matters, an NGO in Nepal that combats the trafficking and abuse of children, 70% of whom are estimated to have parents and families, in child homes and orphanages. Freedom Matters is currently providing housing to 23 rescued children who could not be immediately reintegrated with family members in their Child Receiving Home. These funds will provide for one month’s needs to all the children in Freedom Matters’ care.",
+        "limit": 23,
+        "repeated": true
+    },
+    {
+        "name": "Project 16",
+        "cause": "Child trafficking",
+        "category": "Rehabilitation",
+        "country": "Malaysia",
+        "cost": 10500,
+        "short_description": "Support counselling and group therapy sessions for children rescued from trafficking",
+        "description": "This programming will be conducted by SUKA Society Malaysia, an organization dedicated to the future of children trafficked into Malaysia. They provide critical shelter and resources to children that have been identified and rescued out of trafficking, designed to provide hope for a regular childhood to these unfortunate kids. Your support will provide counselling and group therapy with professionals to help the children under the care of SUKA Society in early 2015.",
+        "limit": 1
+    },
+    {
+        "name": "Project 17",
+        "cause": "Child Labour",
+        "category": "Rehabilitation",
+        "country": "Nepal",
+        "cost": 13500,
+        "short_description": "Support counselling for children rescued from abuse to rebuild their dignity",
+        "description": "This project will be implemented by Freedom Matters, an NGO in Nepal that combats the trafficking and abuse of children, 70% of whom are estimated to have parents and families, in child homes and orphanages. Through its years of operations Freedom Matters has discovered that It is critical to be able to provide psychological counselling and support to children rescued from abuse in order to gather evidence and ensure successful reintegration of the children into their families. These funds will keep staff on hand able to provide this kind of support to children under Freedom Matters’ care.",
+        "limit": 1
+    },
+    {
+        "name": "Project 18",
+        "cause": "Child Labour",
+        "category": "Rehabilitation",
+        "country": "Nepal",
+        "cost": 16400,
+        "short_description": "Support post-rescue ad hoc needs of rescued children (clothes, medical, family transport)",
+        "description": "This project will be implemented by Freedom Matters, an NGO in Nepal that combats the trafficking and abuse of children, 70% of whom are estimated to have parents and families, in child homes and orphanages. These funds will provide for the needs of children as they are rescued and taken into the care of Freedom Matters, needs such as emergency medical support and health care, clothing, and even costs such as the transport of a child’s poor, rural parents into Kathmandu to reunite a family.",
+        "limit": 1
+    },
+    {
+        "name": "Project 19",
+        "cause": "Child Labour",
+        "category": "Rehabilitation",
+        "country": "Nepal",
+        "cost": 30250,
+        "short_description": "Provide transitional shelter rescued children outside Kathmandu for a month",
+        "description": "Transitional shelter for vulnerable children in Kathmandu is provided by Freedom Matters, an NGO in Nepal that combats the trafficking and abuse of children, 70% of whom are estimated to have parents and families, in child homes and orphanages. The Child Receiving Home they operate is able to provide shelter for nearly 60 children and must be maintained to support the capacity of stakeholders to raid abusive homes and rescue children at a moment’s notice. ",
+        "limit": 1
+    },
+    {
+        "name": "Project 20",
+        "cause": "Child sex trafficking",
+        "category": "Rehabilitation",
+        "country": "Vietnam",
+        "cost": 5100,
+        "short_description": "Provide medical care, including HIV support, for one girl rescued from sex trade",
+        "description": "This workshop will be conducted by Blue Dragon Children’s Foundation in northern Vietnam near the Chinese border. Blue Dragon rescues and rehabilitates children from forced labor in Vietnam and young girls trafficked into the Vietnamese-Chinese sex trade. These trainings will help officials “fireproof” source villages against trafficking by teaching about the issue, how traffickers operate and how the law can be applied to prosecute them. Four such workshops will be conducted in 2015. ",
+        "limit": 1
+    },
+    {
+        "name": "Project 21",
+        "cause": "Child Trafficking",
+        "category": "Investment",
+        "country": "Nepal",
+        "cost": 6800,
+        "short_description": "Support an ongoing investigation in fraudulent and abusive orphanages in Kathmandu",
+        "description": "These investigations are currently being conducted by Freedom Matters, an NGO in Nepal that combats the trafficking and abuse of children, 70% of whom are estimated to have parents and families, in child homes and orphanages. These leads target four potentially corrupt child homes in Kathmandu. Investigations require personnel, communications and surveillance equipment, transportation, government liaison, and research in order to move toward fruition and a raid operation to rescue children.",
+        "limit": 4,
+        "repeated": true
+    },
+    {
+        "name": "Project 22",
+        "cause": "Child Trafficking",
+        "category": "Investment",
+        "country": "Cambodia",
+        "cost": 10200,
+        "short_description": "Support a workshop to educate government officials on trafficking in persons issues",
+        "description": "This training session will be hosted by APLE Cambodia in Phnom Penh, bringing together dozens of NGO and government officials to encourage conceptual clarity on human trafficking and slavery issues, address challenges, and share best practices. APLE Cambodia’s primary mission is to disrupt the trafficking of children into forced prostitution. This workshop is scheduled for March 2015..",
+        "limit": 4
+    },
+    {
+        "name": "Project 23",
+        "cause": "Child Trafficking",
+        "category": "Investment",
+        "country": "Malaysia",
+        "cost": 13000,
+        "short_description": "Support training for government & NGO officials on best practices to handle victims",
+        "description": "These workshops will be conducted by SUKA Society Malaysia in Kuala Lumpur in each quarter of 2015 to educate government officials in police and relevant agencies on best practices in identifying and handling victims of slavery, exploitation, and trafficking. This is a critical gap in protecting those affected by trafficking and abuse. SUKA Society is an NGO dedicated to the security and welfare of children trafficked into Malaysia. ",
+        "limit": 1
+    },
+    {
+        "name": "Project 24",
+        "cause": "Child Trafficking",
+        "category": "Investment",
+        "country": "Malaysia",
+        "cost": 13000,
+        "short_description": "Fund social workers to identify trafficking victims with UN Refugee Agency",
+        "description": "SUKA Society employs social workers with expertise and experience on human trafficking to work with the office of the UN High Commissioner for Refugees to interview and identify children subjected to abuse and trafficking into Malaysia.  SUKA Society is an NGO dedicated to the security and welfare of these trafficked and exploited children. These operations are crucial to identifying criminal trafficking networks and stopping the abuse of vulnerable children.",
+        "limit": 4,
+        "repeated": true
+    },
+    {
+        "name": "Project 25",
+        "cause": "Child Trafficking",
+        "category": "Investment",
+        "country": "Nepal",
+        "cost": 13250,
+        "short_description": "Identify and trace the families of children rescued from abusive orphanages",
+        "description": "These investigations will be conducted by Freedom Matters, an NGO in Nepal that combats the trafficking and abuse of children, 70% of whom are estimated to have parents and families, in child homes and orphanages. After children are rescued, the difficult work of identifying and tracking down their families, often in remote, rural districts in hard-to-reach districts of Nepal can begin. These funds will support the operations needed to reunite a rescued child",
+        "limit": 1
+    },
+    {
+        "name": "Project 26",
+        "cause": "Child Trafficking",
+        "category": "Investment",
+        "country": "Nepal",
+        "cost": 13600,
+        "short_description": "Launch the first ever dedicated research project into Nepal’s 700+ orphanages",
+        "description": "This research project will be launched in 2015 by Freedom Matters, an NGO in Nepal that combats the trafficking and abuse of children, 70% of whom are estimated to have parents and families, in child homes and orphanages. Despite growing awareness of abuse and corruption in orphanages, critical questions remain - how many children are involved? Who are the traffickers? From where exactly do donations to orphanages come? How much money does a proprietor stand to make from one child? This information would provide clarity and an urgent call-to-arms against the “Orphan Business” in Nepal. Dedicated personnel and technological equipment are desperately needed to take the first steps in 2015.",
+        "limit": 1
+    },
+    {
+        "name": "Project 27",
+        "cause": "Child Sex Trafficking",
+        "category": "Investment",
+        "country": "Cambodia",
+        "cost": 15000,
+        "short_description": "Maintain the operation of a 24 hour NGO-run hotline to report trafficking",
+        "description": "This hotline is currently maintained and operated by APLE Cambodia, an organization whose primary mission is to disrupt the trafficking of children into forced prostitution. The hotline provides tips of cases of child slavery and sexual abuse to be pursued by APLE in coordination with local police.  These funds will allow APLE to continue to operate this hotline for the entirety of 2015.",
+        "limit": 1
+    },
+    {
+        "name": "Project 28",
+        "cause": "Child Trafficking",
+        "category": "Investment",
+        "country": "Malaysia",
+        "cost": 15800,
+        "short_description": "Fund SUKA Society’s entire 2015 administrative costs to support trafficked children",
+        "description": "SUKA Society is an NGO dedicated to the security and welfare of children trafficked into Malaysia, a major destination country for trafficking victims and slavery abuses but with developing capacity and awareness on the issue. These funds will cover the entirety of SUKA Society’s 2015 administrative costs, allowing SUKA Society to continue its excellent work serving vulnerable children and making slavery an urgent issue in Malaysia.",
+        "limit": 1
+    },
+    {
+        "name": "Project 29",
+        "cause": "Child Trafficking",
+        "category": "Investment",
+        "country": "Vietnam",
+        "cost": 21300,
+        "short_description": "Support a registration campaign to provide legal documents to 500 villagers in 2015",
+        "description": "This campaign will be implemented by Blue Dragon Children’s Foundation, an organization that rescues and rehabilitates children from forced labor in Vietnam and young girls trafficked into the Vietnamese-Chinese sex trade. Their research has indicated that children without legal identification papers is at higher risk of being trafficked, and will be much more difficult to trace. Investing in this registration campaign ensures families in high-risk areas receive the legal protection they need.",
+        "limit": 1
+    },
+    {
+        "name": "Project 30",
+        "cause": "Child Sex Trafficking",
+        "category": "Investment",
+        "country": "Cambodia",
+        "cost": 34000,
+        "short_description": "Fund critical comms, surveillance, and tech equipment for 2015 slavery investigations",
+        "description": "This equipment is needed by APLE Cambodia, an organization whose primary mission is to disrupt the trafficking of children into forced prostitution. These funds will provide the resources that APLE needs to conduct the investigative surveillance anticipated for 2015. APLE is a dynamic organization developing the leading best practices to gather evidence and support successful prosecutions against the worst abusers and traffickers of children.",
+        "limit": 1
+    },
+    {
+        "name": "Project 31",
+        "cause": "Child Trafficking",
+        "category": "Investment",
+        "country": "Vietnam",
+        "cost": 51200,
+        "short_description": "Fund a grassroots awareness campaign over radio and media to share survivors’ stories",
+        "description": "This campaign is a 2015 priority of SUKA Society, an NGO dedicated to the security and welfare of children trafficked into Malaysia, a major destination country for trafficking victims and slavery abuses. Despite this status as a destination country, trafficking remains an issue of little urgency and understanding. SUKA wants to invest in a media campaign to share the stories of willing survivors and empower Malaysian society to learn about slavery and demand change.",
+        "limit": 1
+    },
+    {
+        "name": "Project 32",
+        "cause": "Child Trafficking",
+        "category": "Investment",
+        "country": "Cambodia",
+        "cost": 52500,
+        "short_description": "Fund a media campaign to facilitate education, awareness and vigilance on trafficking",
+        "description": "This campaign will be implemented by APLE Cambodia, an organization whose primary mission is to disrupt the trafficking of children into forced prostitution. In 2015 they intend to reach out into grassroots community through print and radio media, as well as through educated advocates and allies. teach communities, families, and parents about the vulnerabilities that lead to trafficking and the worst practices of the traffickers. This awareness can stop trafficking at its source.",
+        "limit": 1
+    },
+    {
+        "name": "Project 33",
+        "cause": "Child Trafficking",
+        "category": "Investment",
+        "country": "Nepal",
+        "cost": 162200,
+        "short_description": "Fund a Child Trauma Management Centre, an innovative home for those rescued from abuse",
+        "description": "In 2015 Freedom Matters wants to launch a Child Trauma Management Centre, a facility desperately lacking in Kathmandu that would possess the capacity to psychologically rehabilitate children rescued from trafficking, exploitation, and abuse. Freedom Matters is an NGO in Nepal that combats the trafficking and abuse of children, 70% of whom are estimated to have parents and families, in child homes and orphanages. However this centre would help children recovered from forced labor and domestic abuse as well. These resources are entirely absent in Nepal, where there is little focus on rebuilding the personhood and self-esteem of broken children. Help Freedom Matters change this.",
+        "limit": 1
+    }
+]
