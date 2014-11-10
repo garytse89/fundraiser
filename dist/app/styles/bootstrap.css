@@ -5264,7 +5264,7 @@ a.list-group-item.active > .badge,
 .thumbnail {
   display: inline-block;
   display: block;
-  height: 22em;
+  height: 25em;
   max-width: 100%;
   padding: 4px;
   margin-bottom: 20px;
