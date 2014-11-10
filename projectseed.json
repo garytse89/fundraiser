@@ -27,8 +27,7 @@
         "cost": 3400,
         "short_description": "Fund a rescue operation for children in rogue orphanages",
         "description": "These rescues are being planned by Freedom Matters, an NGO in Nepal that combats the trafficking and abuse of children, 70% of whom are estimated to have parents and families, in child homes and orphanages. Freedom Matters is currently investigating four orphanages on child trafficking and exploitation, with rescues expected to be conducted in the first half of 2015. ",
-        "limit": 4,
-        "repeated": true
+        "limit": 4
     },
     {
         "name": "Child Sex Trafficking 3",
@@ -69,7 +68,7 @@
         "increment": 9600,
         "short_description": "Fund a brothel rescue in December 2014 for trafficked underage girls",
         "description": "This operation will be implemented by APLE Cambodia, an organization based in Phnom Penh whose primary mission is to disrupt the trafficking of children into forced prostitution. APLE is currently investigating the case of a facility operating as a potential haven for the sex trafficking of underage girls and anticipates being able to conduct a raid before the end of 2014.",
-        "limit": 1        
+        "limit": 5       
     },
     {
         "name": "Child Sex Trafficking 6",
@@ -100,7 +99,6 @@
         "short_description": "Fund education for a child rescued from bonded labor",
         "description": "The education of these children will be sponsored directly by Blue Dragon Children’s Foundation, which rescues and rehabilitates children from forced labor in Vietnam and young girls trafficked into the Vietnamese-Chinese sex trade. Their comprehensive rehabilitation programming includes the education of rescued children if their families cannot afford it - too often children who’ve been trafficked into factory labor are desperately poor and vulnerable to re-exploitation after rescue. Without this opportunity their future is without hope. ",
         "limit": 50,
-        "repeated": true
     },
     {
         "name": "Child Sex Trafficking 7",
@@ -150,8 +148,7 @@
         "cost": 8250,
         "short_description": "Provide food, clothing, & education for one month, for a child who is unable to be reintegrated",
         "description": "This project will be implemented by Freedom Matters, an NGO in Nepal that combats the trafficking and abuse of children, 70% of whom are estimated to have parents and families, in child homes and orphanages. Freedom Matters is currently providing housing to 23 rescued children who could not be immediately reintegrated with family members in their Child Receiving Home. These funds will provide for one month’s needs to all the children in Freedom Matters’ care.",
-        "limit": 23,
-        "repeated": true
+        "limit": 23
     },
     {
         "name": "Child Trafficking 2",
@@ -211,8 +208,7 @@
         "cost": 6800,
         "short_description": "Support an ongoing investigation in fraudulent and abusive orphanages in Kathmandu",
         "description": "These investigations are currently being conducted by Freedom Matters, an NGO in Nepal that combats the trafficking and abuse of children, 70% of whom are estimated to have parents and families, in child homes and orphanages. These leads target four potentially corrupt child homes in Kathmandu. Investigations require personnel, communications and surveillance equipment, transportation, government liaison, and research in order to move toward fruition and a raid operation to rescue children.",
-        "limit": 4,
-        "repeated": true
+        "limit": 4
     },
     {
         "name": "Child Sex Trafficking 10",
@@ -242,8 +238,7 @@
         "cost": 13000,
         "short_description": "Fund social workers to identify trafficking victims with UN Refugee Agency",
         "description": "SUKA Society employs social workers with expertise and experience on human trafficking to work with the office of the UN High Commissioner for Refugees to interview and identify children subjected to abuse and trafficking into Malaysia.  SUKA Society is an NGO dedicated to the security and welfare of these trafficked and exploited children. These operations are crucial to identifying criminal trafficking networks and stopping the abuse of vulnerable children.",
-        "limit": 4,
-        "repeated": true
+        "limit": 4
     },
     {
         "name": "Child Trafficking 7",
@@ -314,7 +309,7 @@
         "increment" : 10240,
         "short_description": "Fund a grassroots awareness campaign over radio and media to share survivors’ stories",
         "description": "This campaign is a 2015 priority of SUKA Society, an NGO dedicated to the security and welfare of children trafficked into Malaysia, a major destination country for trafficking victims and slavery abuses. Despite this status as a destination country, trafficking remains an issue of little urgency and understanding. SUKA wants to invest in a media campaign to share the stories of willing survivors and empower Malaysian society to learn about slavery and demand change.",
-        "limit": 1
+        "limit": 5
     },
     {
         "name": "Child Trafficking 11",
@@ -325,7 +320,7 @@
         "increment" : 10500,
         "short_description": "Fund a media campaign to facilitate education, awareness and vigilance on trafficking",
         "description": "This campaign will be implemented by APLE Cambodia, an organization whose primary mission is to disrupt the trafficking of children into forced prostitution. In 2015 they intend to reach out into grassroots community through print and radio media, as well as through educated advocates and allies. teach communities, families, and parents about the vulnerabilities that lead to trafficking and the worst practices of the traffickers. This awareness can stop trafficking at its source.",
-        "limit": 1
+        "limit": 5
     },
     {
         "name": "Child Trafficking 12",
@@ -336,6 +331,6 @@
         "increment": 16220,
         "short_description": "Fund a Child Trauma Management Centre, an innovative home for those rescued from abuse",
         "description": "In 2015 Freedom Matters wants to launch and sustain for three years a Child Trauma Management Centre, a facility desperately lacking in Kathmandu that would possess the capacity to psychologically rehabilitate children rescued from trafficking, exploitation, and abuse. Freedom Matters is an NGO in Nepal that combats the trafficking and abuse of children, 70% of whom are estimated to have parents and families, in child homes and orphanages. However this centre would help children recovered from forced labor and domestic abuse as well. These resources are entirely absent in Nepal, where there is little focus on rebuilding the personhood and self-esteem of broken children. Help Freedom Matters change this.",
-        "limit": 1
+        "limit": 10
     }
 ]
